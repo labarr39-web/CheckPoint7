@@ -91,3 +91,35 @@ Resumiendo, JavaScript es especial porque es el lenguaje universal del navegador
 
   <br>  
     
+En JavaScript, los tipos de datos se dividen principalmente en dos categorías: tipos primitivos y tipos de objetos. A continuación te explico detalladamente cada uno de ellos:
+
+1. Tipos Primitivos
+Los tipos primitivos son los valores básicos que no son objetos y no tienen métodos. Son inmutables, es decir, su valor no puede cambiar una vez creado.
+
+Number: Representa tanto números enteros como números de punto flotante. Ejemplo: 42, 3.14.
+BigInt: Representa números enteros muy grandes que exceden el límite de Number. Se escriben con una n al final, por ejemplo: 9007199254740991n.
+String: Cadena de texto. Ejemplo: "Hola mundo".
+Boolean: Representa un valor lógico, que puede ser true o false.
+Undefined: Representa una variable que ha sido declarada pero no inicializada.
+Null: Representa la ausencia intencional de cualquier valor u objeto.
+Symbol: Representa un identificador único e inmutable, usado principalmente para propiedades de objetos que no colisionen.
+2. Tipos de Objetos
+Los objetos son colecciones de propiedades y pueden contener métodos. Son mutables.
+
+Object: Tipo base para todos los objetos. Puede contener pares clave-valor.
+Array: Un tipo especial de objeto para almacenar listas ordenadas de valores.
+Function: También es un objeto, representa funciones.
+Date, RegExp, Map, Set, entre otros, son tipos de objetos incorporados que tienen funcionalidades específicas.
+Resumen en tabla
+Tipo de dato	Descripción	Ejemplo
+Number	Números enteros y decimales	123, 3.14
+BigInt	Números enteros muy grandes	9007199254740991n
+String	Texto	"Hola"
+Boolean	Valores lógicos	true, false
+Undefined	Variable no inicializada	undefined
+Null	Valor nulo intencional	null
+Symbol	Identificador único	Symbol('id')
+Object	Colección de propiedades	{ nombre: "Ana" }
+Array	Lista ordenada de valores	[1, 2, 3]
+Function	Funciones como objetos	function() {}
+Si quieres, puedo darte ejemplos prácticos de cada
