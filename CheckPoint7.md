@@ -209,7 +209,7 @@ Esta inmutabilidad de los tipos primitivos es fundamental para entender cómo fu
 
 <br>
 
-AbraCadaBra\
+\
 <br>
 
 ### 4. ¿Qué es un condicional?
