@@ -215,3 +215,60 @@ Esta inmutabilidad de los tipos primitivos es fundamental para entender cómo fu
 ### 4. ¿Qué es un condicional?
 
 <br>
+
+Un condicional en JavaScript es una estructura de control que permite al programa tomar decisiones y ejecutar diferentes bloques de código según si una condición lógica es verdadera (`true`) o falsa (`false`).&#x20;
+
+Es fundamental para crear comportamiento dinámico, evaluando condiciones (`if`, `else`, `switch`) para dirigir el flujo.&#x20;
+
+
+
+**Tipos y Características Principales:**
+
+
+
+* **`if` / `else if` / `else`:** La estructura básica. Evalúa una condición; si es verdadera, ejecuta el bloque `if`, de lo contrario, puede ejecutar un `else`.
+
+
+
+**Ejemplo Básico `if/else`:**
+
+```js
+let edad = 18;
+if (edad >= 18) {
+    console.log("Eres mayor de edad."); // Se ejecuta si es true
+} else {
+    console.log("Eres menor de edad."); // Se ejecuta si es false
+}
+```
+
+
+
+Puede darse el caso en el que haya que ir seleccionando opciones dependiendo de las anteriores, es decir, condicionales anidadas.
+
+```javascript
+let parece = 'pato';
+let habla = 'cuack';
+let andaComo = 'pato';
+if (parece === 'pato') {
+    if (habla === 'cuack') {
+        if (andaComo === 'pato') {
+            console.log("¡Es un pato!")
+        } else {
+            console.log("Esto no es un pato")
+        }
+    }    
+}
+```
+
+
+
+* **Operador Ternario (`? :`):** Un atajo compacto para `if...else` de una sola línea. Su sintaxis es: `condición ? expresión1 : expresión2`.
+
+
+
+* **`switch`:** Ideal para evaluar una variable contra múltiples casos (`case`) posibles.
+
+
+
+* **Valores `truthy` y `falsy`:** En JS, las condiciones no solo reciben `true`/`false`. Valores como `0`, `""` (cadena vacía), `null`, `undefined` o `NaN` se consideran `false` (falsy), mientras que el resto son `true` (truthy).&#x20;
+
