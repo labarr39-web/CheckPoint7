@@ -245,6 +245,8 @@ if (edad >= 18) {
 
 Puede darse el caso en el que haya que ir seleccionando opciones dependiendo de las anteriores, es decir, condicionales anidadas.
 
+
+
 ```javascript
 let parece = 'pato';
 let habla = 'cuack';
@@ -259,6 +261,34 @@ if (parece === 'pato') {
     }    
 }
 ```
+
+
+
+Desgraciadamente si la condición no se cumple, el código entra en la parte `else` , que se convierte en una especie de cajón desastre ya que se puede entender como "si no cumple lo anterior haz esto", y en caso de necesitar hacer otro crivado no lo lograremos con esta estructura... Para ello usaremos `else if`  para anidar otra condición si no se cumple la anterior.
+
+```javascript
+let parece = 'perro';
+let habla = 'guau';
+let andaComo = 'perro';
+
+if (parece === 'pato') { 
+    if (habla === 'cuack') { 
+        if (andaComo === 'pato') { 
+            console.log("¡Es un pato!"); 
+        } 
+    } 
+} else if (parece === 'perro') { 
+    if (habla === 'guau') { 
+        if (andaComo === 'perro') { 
+            console.log("¡Es un perro!"); 
+        } else { 
+            console.log("No es un pato ni un perro"); 
+        } 
+    } 
+}
+```
+
+
 
 
 
