@@ -1,20 +1,19 @@
-# CheckPoint 7  
-<br>  
+# CheckPoint 7
 
-![JavaScript](images/Code_JS-1200x630.original.avif)
-<br><br>  
+<br>
 
+![JavaScript](.gitbook/assets/Code_JS-1200x630.original.avif)\
+<br>
 
-### 1. ¿Qué diferencia a Javascript de cualquier otro lenguaje de programación? ###
+### 1. ¿Qué diferencia a Javascript de cualquier otro lenguaje de programación?
 
-  <br>  
-    
+<br>
 
 JavaScript es especial por varias razones que lo han convertido en uno de los lenguajes de programación más importantes y populares en el desarrollo web y más allá. A continuación, te explico en detalle por qué JavaScript es especial:
 
 ​
 
-* #### **Lenguaje de programación del navegador** ####
+* **Lenguaje de programación del navegador**
 
 ​
 
@@ -22,24 +21,23 @@ JavaScript es el único lenguaje de programación que se ejecuta de forma nativa
 
 ​
 
-* #### **Versatilidad y omnipresencia** ####  
+* **Versatilidad y omnipresencia**
 
-<br>  
+<br>
 
-**Frontend:** JavaScript es el lenguaje principal para el desarrollo del lado del cliente (frontend). Permite manipular el DOM (Document Object Model), gestionar eventos, validar formularios, crear animaciones, y mucho más.  
+**Frontend:** JavaScript es el lenguaje principal para el desarrollo del lado del cliente (frontend). Permite manipular el DOM (Document Object Model), gestionar eventos, validar formularios, crear animaciones, y mucho más.
 
-<br>  
+<br>
 
-**Backend:** Con la llegada de Node.js, JavaScript también se usa en el servidor, lo que permite a los desarrolladores usar un solo lenguaje para todo el stack de desarrollo (full stack).  
+**Backend:** Con la llegada de Node.js, JavaScript también se usa en el servidor, lo que permite a los desarrolladores usar un solo lenguaje para todo el stack de desarrollo (full stack).
 
-<br>  
+<br>
 
 **Aplicaciones móviles y de escritorio:** Frameworks como React Native, Electron y otros permiten crear aplicaciones móviles y de escritorio usando JavaScript.
-    
 
 ​
 
-* #### **Ecosistema y comunidad** ####
+* **Ecosistema y comunidad**
 
 ​
 
@@ -47,7 +45,7 @@ JavaScript tiene un ecosistema enorme con miles de librerías y frameworks (Reac
 
 ​
 
-* #### **Evolución constante** ####
+* **Evolución constante**
 
 ​
 
@@ -55,7 +53,7 @@ JavaScript no es un lenguaje estático; evoluciona continuamente a través del e
 
 ​
 
-* #### **Facilidad de aprendizaje y uso** ####
+* **Facilidad de aprendizaje y uso**
 
 ​
 
@@ -63,7 +61,7 @@ JavaScript es relativamente fácil de aprender para principiantes debido a su si
 
 ​
 
-* #### **Interactividad y experiencia de usuario** ####
+* **Interactividad y experiencia de usuario**
 
 ​
 
@@ -71,7 +69,7 @@ JavaScript permite crear experiencias de usuario ricas e interactivas, desde men
 
 ​
 
-* #### **Integración con otras tecnologías web** ####
+* **Integración con otras tecnologías web**
 
 ​
 
@@ -79,140 +77,141 @@ JavaScript se integra perfectamente con HTML y CSS, los otros pilares del desarr
 
 ​
 
-----------
+***
 
 ​
 
 Resumiendo, JavaScript es especial porque es el lenguaje universal del navegador, extremadamente versátil, con un ecosistema robusto y en constante evolución, que permite crear desde simples interacciones hasta aplicaciones web completas y complejas. Esta combinación única lo hace indispensable en el mundo del desarrollo web y tecnológico actual.
 
-<br><br>
+\
+<br>
 
-### 2. ¿Cuáles son algunos tipos de datos JS? ###
+### 2. ¿Cuáles son algunos tipos de datos JS?
 
-  <br>  
-    
-En JavaScript, los tipos de datos se dividen principalmente en dos categorías: tipos primitivos y tipos de objetos. A continuación vamos a ver detalladamente cada uno de ellos:  
+<br>
 
-<br>  
+En JavaScript, los tipos de datos se dividen principalmente en dos categorías: tipos primitivos y tipos de objetos. A continuación vamos a ver detalladamente cada uno de ellos:
 
-####  **1. Tipos Primitivos** ####
+<br>
 
-Son los los tipos de datos básicos que no son objetos y que representan valores simples. Los tipos primitivos en JavaScript son los siguientes:  
-<br>  
+#### **1. Tipos Primitivos**
 
-* **Number:** 
+Son los los tipos de datos básicos que no son objetos y que representan valores simples. Los tipos primitivos en JavaScript son los siguientes:\
+<br>
 
-Representa tanto números enteros como números de punto flotante.  
+* **Number:**
 
-Ejemplo: 42, 3.14.  
-<br>  
+Representa tanto números enteros como números de punto flotante.
 
-* **BigInt:**  
+Ejemplo: 42, 3.14.\
+<br>
 
-Representa números enteros muy grandes que exceden el límite de Number. 
+* **BigInt:**
 
-Se escriben con una **n** al final.  
+Representa números enteros muy grandes que exceden el límite de Number.
 
-Ejemplo: 9007199254740991n.  
-<br>  
+Se escriben con una **n** al final.
 
-* **String:**  
+Ejemplo: 9007199254740991n.\
+<br>
 
-Cadena de texto.  
+* **String:**
 
-Ejemplo: "Hola mundo".  
-<br>  
+Cadena de texto.
 
-* **Boolean:**  
+Ejemplo: "Hola mundo".\
+<br>
 
-Representa un valor lógico, que puede ser `true` o `false`.  
-<br>  
+* **Boolean:**
 
-* **Undefined:**  
+Representa un valor lógico, que puede ser `true` o `false`.\
+<br>
 
-Representa una variable que ha sido declarada pero no inicializada.  
-<br>  
+* **Undefined:**
 
-* **Null:**  
+Representa una variable que ha sido declarada pero no inicializada.\
+<br>
 
-Representa la ausencia intencional de cualquier valor u objeto.  
-<br>  
+* **Null:**
 
-* **Symbol:**  
+Representa la ausencia intencional de cualquier valor u objeto.\
+<br>
 
-Representa un identificador único e inmutable, usado principalmente para propiedades de objetos que no colisionen.  
+* **Symbol:**
 
-Ejemplo: Symbol('id').  
+Representa un identificador único e inmutable, usado principalmente para propiedades de objetos que no colisionen.
 
-<br><br>  
+Ejemplo: Symbol('id').
 
-####  **2. Tipos de Objetos** ####  
+\
+<br>
 
-<br>  
+#### **2. Tipos de Objetos**
 
-Los objetos son colecciones de propiedades y pueden contener métodos.  
-<br>  
+<br>
 
-* **Object:**  
+Los objetos son colecciones de propiedades y pueden contener métodos.\
+<br>
 
-Tipo base para todos los objetos.  
+* **Object:**
 
-Puede contener pares clave-valor.  
-<br>  
+Tipo base para todos los objetos.
 
-* **Array:**  
+Puede contener pares clave-valor.\
+<br>
 
-Un tipo especial de objeto para almacenar listas ordenadas de valores.  
+* **Array:**
 
-Ejemplo: [1, 2, 3].  
-<br>  
+Un tipo especial de objeto para almacenar listas ordenadas de valores.
 
-* **Function:**  
+Ejemplo: \[1, 2, 3].\
+<br>
 
-También es un objeto, representa funciones.  
+* **Function:**
 
-Ejemplo: function() { return "Hola"; }.  
+También es un objeto, representa funciones.
 
-Date, RegExp, Map, Set, entre otros, son tipos de objetos incorporados que tienen funcionalidades específicas.  
-<br>  
+Ejemplo: function() { return "Hola"; }.
 
- 
-<br>  
+Date, RegExp, Map, Set, entre otros, son tipos de objetos incorporados que tienen funcionalidades específicas.\
+<br>
 
-| Tipo de dato	 | Descripción	 | Ejemplo
-|------------------|------------------|----------
-| Number	 | Números enteros y decimales	 | 123, 3.14
-| BigInt	 | Números enteros muy grandes	 | 9007199254740991n
-| String	 | Texto	 | "Hola"
-| Boolean	 | Valores lógicos	 | true, false
-| Undefined	 | Variable no inicializada	 | undefined
-| Null	 | Valor nulo intencional	 | null
-| Symbol	 | Identificador único	 | Symbol('id')
-| Object	 | Colección de propiedades	 | { nombre: "Ana" }
-| Array	 | Lista ordenada de valores	 | [1, 2, 3]
-| Function	 | Funciones como objetos	 | function() {}
+<br>
 
-<br><br>  
+| Tipo de dato | Descripción                 | Ejemplo           |
+| ------------ | --------------------------- | ----------------- |
+| Number       | Números enteros y decimales | 123, 3.14         |
+| BigInt       | Números enteros muy grandes | 9007199254740991n |
+| String       | Texto                       | "Hola"            |
+| Boolean      | Valores lógicos             | true, false       |
+| Undefined    | Variable no inicializada    | undefined         |
+| Null         | Valor nulo intencional      | null              |
+| Symbol       | Identificador único         | Symbol('id')      |
+| Object       | Colección de propiedades    | { nombre: "Ana" } |
+| Array        | Lista ordenada de valores   | \[1, 2, 3]        |
+| Function     | Funciones como objetos      | function() {}     |
+
+\
+<br>
 
 **Los tipos primitivos en JavaScript son inmutables**. Esto significa que una vez que se crea un valor primitivo, no puede ser cambiado o modificado. Por ejemplo, si tienes una cadena de texto (string) o un número (number), no puedes alterar ese valor directamente; cualquier operación que parezca modificarlo en realidad crea un nuevo valor.
 
 Para ilustrar:
 
-Las cadenas de texto son inmutables: si haces una operación como concatenar o cambiar un carácter, se genera una nueva cadena, no se modifica la original.
-Los números, booleanos, null, undefined, symbol y bigint también son inmutables por naturaleza.
-En contraste, **los objetos en JavaScript son mutables**, lo que significa que sus propiedades o contenido pueden cambiar después de ser creados.
+Las cadenas de texto son inmutables: si haces una operación como concatenar o cambiar un carácter, se genera una nueva cadena, no se modifica la original. Los números, booleanos, null, undefined, symbol y bigint también son inmutables por naturaleza. En contraste, **los objetos en JavaScript son mutables**, lo que significa que sus propiedades o contenido pueden cambiar después de ser creados.
 
-Esta inmutabilidad de los tipos primitivos es fundamental para entender cómo funcionan las asignaciones y comparaciones en JavaScript.  
+Esta inmutabilidad de los tipos primitivos es fundamental para entender cómo funcionan las asignaciones y comparaciones en JavaScript.
 
-<br><br>  
+\
+<br>
 
-### 3. ¿Cuáles son las tres funciones de String en JS? ###
+### 3. ¿Cuáles son las tres funciones de String en JS?
 
-  <br>  
+<br>
 
-<br><br>  
+AbraCadaBra\
+<br>
 
-### 4. ¿Qué es un condicional? ###
+### 4. ¿Qué es un condicional?
 
-  <br>  
-        
+<br>
