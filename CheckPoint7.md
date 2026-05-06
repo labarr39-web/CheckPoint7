@@ -268,7 +268,7 @@ Desgraciadamente si la condición no se cumple, el código entra en la parte `el
 
 ```javascript
 let parece = 'perro';
-let habla = 'guau';
+let habla = 'cuack';
 let andaComo = 'perro';
 
 if (parece === 'pato') { 
@@ -281,11 +281,14 @@ if (parece === 'pato') {
     if (habla === 'guau') { 
         if (andaComo === 'perro') { 
             console.log("¡Es un perro!"); 
-        } else { 
-            console.log("No es un pato ni un perro"); 
         } 
-    } 
+    } else {
+        console.log("No es un pato ni un perro");
+    }
+} else { 
+    console.log("No es un pato ni un perro");  
 }
+
 ```
 
 
