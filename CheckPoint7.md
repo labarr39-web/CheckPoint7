@@ -91,35 +91,128 @@ Resumiendo, JavaScript es especial porque es el lenguaje universal del navegador
 
   <br>  
     
-En JavaScript, los tipos de datos se dividen principalmente en dos categorías: tipos primitivos y tipos de objetos. A continuación te explico detalladamente cada uno de ellos:
+En JavaScript, los tipos de datos se dividen principalmente en dos categorías: tipos primitivos y tipos de objetos. A continuación vamos a ver detalladamente cada uno de ellos:  
 
-1. Tipos Primitivos
-Los tipos primitivos son los valores básicos que no son objetos y no tienen métodos. Son inmutables, es decir, su valor no puede cambiar una vez creado.
+<br>  
 
-Number: Representa tanto números enteros como números de punto flotante. Ejemplo: 42, 3.14.
-BigInt: Representa números enteros muy grandes que exceden el límite de Number. Se escriben con una n al final, por ejemplo: 9007199254740991n.
-String: Cadena de texto. Ejemplo: "Hola mundo".
-Boolean: Representa un valor lógico, que puede ser true o false.
-Undefined: Representa una variable que ha sido declarada pero no inicializada.
-Null: Representa la ausencia intencional de cualquier valor u objeto.
-Symbol: Representa un identificador único e inmutable, usado principalmente para propiedades de objetos que no colisionen.
-2. Tipos de Objetos
-Los objetos son colecciones de propiedades y pueden contener métodos. Son mutables.
+####  **1. Tipos Primitivos** ####
 
-Object: Tipo base para todos los objetos. Puede contener pares clave-valor.
-Array: Un tipo especial de objeto para almacenar listas ordenadas de valores.
-Function: También es un objeto, representa funciones.
-Date, RegExp, Map, Set, entre otros, son tipos de objetos incorporados que tienen funcionalidades específicas.
-Resumen en tabla
-Tipo de dato	Descripción	Ejemplo
-Number	Números enteros y decimales	123, 3.14
-BigInt	Números enteros muy grandes	9007199254740991n
-String	Texto	"Hola"
-Boolean	Valores lógicos	true, false
-Undefined	Variable no inicializada	undefined
-Null	Valor nulo intencional	null
-Symbol	Identificador único	Symbol('id')
-Object	Colección de propiedades	{ nombre: "Ana" }
-Array	Lista ordenada de valores	[1, 2, 3]
-Function	Funciones como objetos	function() {}
-Si quieres, puedo darte ejemplos prácticos de cada
+Son los los tipos de datos básicos que no son objetos y que representan valores simples. Los tipos primitivos en JavaScript son los siguientes:  
+<br>  
+
+* **Number:** 
+
+Representa tanto números enteros como números de punto flotante.  
+
+Ejemplo: 42, 3.14.  
+<br>  
+
+* **BigInt:**  
+
+Representa números enteros muy grandes que exceden el límite de Number. 
+
+Se escriben con una **n** al final.  
+
+Ejemplo: 9007199254740991n.  
+<br>  
+
+* **String:**  
+
+Cadena de texto.  
+
+Ejemplo: "Hola mundo".  
+<br>  
+
+* **Boolean:**  
+
+Representa un valor lógico, que puede ser `true` o `false`.  
+<br>  
+
+* **Undefined:**  
+
+Representa una variable que ha sido declarada pero no inicializada.  
+<br>  
+
+* **Null:**  
+
+Representa la ausencia intencional de cualquier valor u objeto.  
+<br>  
+
+* **Symbol:**  
+
+Representa un identificador único e inmutable, usado principalmente para propiedades de objetos que no colisionen.  
+
+Ejemplo: Symbol('id').  
+
+<br><br>  
+
+####  **2. Tipos de Objetos** ####  
+
+<br>  
+
+Los objetos son colecciones de propiedades y pueden contener métodos.  
+<br>  
+
+* **Object:**  
+
+Tipo base para todos los objetos.  
+
+Puede contener pares clave-valor.  
+<br>  
+
+* **Array:**  
+
+Un tipo especial de objeto para almacenar listas ordenadas de valores.  
+
+Ejemplo: [1, 2, 3].  
+<br>  
+
+* **Function:**  
+
+También es un objeto, representa funciones.  
+
+Ejemplo: function() { return "Hola"; }.  
+
+Date, RegExp, Map, Set, entre otros, son tipos de objetos incorporados que tienen funcionalidades específicas.  
+<br>  
+
+ 
+<br>  
+
+| Tipo de dato	 | Descripción	 | Ejemplo
+|------------------|------------------|----------
+| Number	 | Números enteros y decimales	 | 123, 3.14
+| BigInt	 | Números enteros muy grandes	 | 9007199254740991n
+| String	 | Texto	 | "Hola"
+| Boolean	 | Valores lógicos	 | true, false
+| Undefined	 | Variable no inicializada	 | undefined
+| Null	 | Valor nulo intencional	 | null
+| Symbol	 | Identificador único	 | Symbol('id')
+| Object	 | Colección de propiedades	 | { nombre: "Ana" }
+| Array	 | Lista ordenada de valores	 | [1, 2, 3]
+| Function	 | Funciones como objetos	 | function() {}
+
+<br><br>  
+
+**Los tipos primitivos en JavaScript son inmutables**. Esto significa que una vez que se crea un valor primitivo, no puede ser cambiado o modificado. Por ejemplo, si tienes una cadena de texto (string) o un número (number), no puedes alterar ese valor directamente; cualquier operación que parezca modificarlo en realidad crea un nuevo valor.
+
+Para ilustrar:
+
+Las cadenas de texto son inmutables: si haces una operación como concatenar o cambiar un carácter, se genera una nueva cadena, no se modifica la original.
+Los números, booleanos, null, undefined, symbol y bigint también son inmutables por naturaleza.
+En contraste, **los objetos en JavaScript son mutables**, lo que significa que sus propiedades o contenido pueden cambiar después de ser creados.
+
+Esta inmutabilidad de los tipos primitivos es fundamental para entender cómo funcionan las asignaciones y comparaciones en JavaScript.  
+
+<br><br>  
+
+### 3. ¿Cuáles son las tres funciones de String en JS? ###
+
+  <br>  
+
+<br><br>  
+
+### 4. ¿Qué es un condicional? ###
+
+  <br>  
+        
