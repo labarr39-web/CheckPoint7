@@ -296,11 +296,71 @@ if (parece === 'pato') {
 
 
 
-* **Operador Ternario (`? :`):** Un atajo compacto para `if...else` de una sola línea. Su sintaxis es: `condición ? expresión1 : expresión2`.
+* **Operador Ternario (`? :`):** Un atajo compacto para `if...else` de una sola línea y su sintaxis es: `condición ? expresión1 : expresión2` . Pero de este operador hablaremos un poco más adelante.
+
+
 
 
 
 * **`switch`:** Ideal para evaluar una variable contra múltiples casos (`case`) posibles.
+
+Supongamos que estamos en una tienda virtual y queremos comprar por ejemplo una prenda de vestir, pero dependiendo de la talla el precio varía; así pues, podríamos anidar estructures `else if` , una por cada talla, lo cual haría un código más complicado de leer (y más fácil de cometer un error al escribirlo), imagina cómo puede quedar el código teniendo que anidar las opciones desde la talla XXS hasta la XXXL...&#x20;
+
+En lugar de ello podríamos usar `switch...case` , cuya sintáxis básica es:
+
+```
+switch (expresión) {
+  case valor1:
+    //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor1
+    [break;]
+  case valor2:
+    //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor2
+    [break;]
+  ...
+  case valorN:
+    //Declaraciones ejecutadas cuando el resultado de expresión coincide con valorN
+    [break;]
+  default:
+    //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
+    [break;]
+}
+```
+
+
+
+**expresión:**
+
+Es una expresión que es comparada con el valor de cada instancia `case`.
+
+
+
+**case valorN:**
+
+Una instancia `case valorN` se usa para compararla con `expresión`.&#x20;
+
+Si `expresión` coincide con `valorN`, las declaraciones dentro de la instancia `case` se ejecutan hasta que se encuentre el final de la declaración `switch` o hasta encontrar una interrupción `break`.
+
+
+
+**default:**
+
+La instancia `default`, es declarada para ejecutarse si el valor de `expresión` no coincide con ninguna de las instancias `case valorN`.
+
+***
+
+#### **Descripción**
+
+Si ocurre una coincidencia, el programa ejecuta las declaraciones asociadas correspondientes. Si la expresión coincide con múltiples entradas, la primera será la seleccionada, incluso si las mayúsculas son tenidas en cuenta.
+
+El programa primero busca la primer instancia `case` cuya expresión se evalúa con el mismo valor de la expresión de entrada (usando comparación estricta, `===` ) y luego transfiere el control a esa cláusula, ejecutando las declaraciones asociadas. Si no se encuentra una cláusula de `case` coincidente, el programa busca la cláusula `default` opcional, y si se encuentra, transfiere el control a esa instancia, ejecutando las declaraciones asociadas. Si no se encuentra una instancia `default` el programa continúa la ejecución en la instrucción siguiente al final del `switch`. Por convención, la instancia `default` es la última cláusula, pero no tiene que ser así.
+
+La declaración `break` es opcional y está asociada con cada etiqueta de `case` y asegura que el programa salga del `switch` una vez que se ejecute la instrucción coincidente y continúe la ejecución en la instrucción siguiente. Si se omite el `break` el programa continúa la ejecución en la siguiente instrucción en la declaración de `switch` .
+
+
+
+
+
+
 
 
 
