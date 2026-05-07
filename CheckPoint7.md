@@ -2,12 +2,15 @@
 
 <br>
 
-![JavaScript](.gitbook/assets/Code_JS-1200x630.original.avif)\
+<figure><img src=".gitbook/assets/Code_JS-1200x630.original.avif" alt=""><figcaption></figcaption></figure>
+
 <br>
 
 ### 1. ¿Qué diferencia a Javascript de cualquier otro lenguaje de programación?
 
-<br>
+
+
+
 
 JavaScript es especial por varias razones que lo han convertido en uno de los lenguajes de programación más importantes y populares en el desarrollo web y más allá. A continuación, te explico en detalle por qué JavaScript es especial:
 
