@@ -219,7 +219,7 @@ Esta inmutabilidad de los tipos primitivos es fundamental para entender cómo fu
 
 <br>
 
-Un condicional en JavaScript es una estructura de control que permite al programa tomar decisiones y ejecutar diferentes bloques de código según si una condición lógica es verdadera (`true`) o falsa (`false`).&#x20;
+Un condicional en JavaScript es una estructura de control que permite al programa tomar decisiones y ejecutar diferentes bloques de código dependiendo de si una condición lógica es verdadera (`true`) o falsa (`false`).&#x20;
 
 Es fundamental para crear comportamiento dinámico, evaluando condiciones (`if`, `else`, `switch`) para dirigir el flujo.&#x20;
 
@@ -248,8 +248,6 @@ if (edad >= 18) {
 
 Puede darse el caso en el que haya que ir seleccionando opciones dependiendo de las anteriores, es decir, condicionales anidadas.
 
-
-
 ```javascript
 let parece = 'pato';
 let habla = 'cuack';
@@ -258,11 +256,11 @@ if (parece === 'pato') {
     if (habla === 'cuack') {
         if (andaComo === 'pato') {
             console.log("¡Es un pato!")
-        } else {
-            console.log("Esto no es un pato")
         }
-    }    
-}
+    } else {
+    console.log("Esto no es un pato")
+    }
+} 
 ```
 
 
