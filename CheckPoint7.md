@@ -620,3 +620,26 @@ var url =
 
 location.assign(url); // "stop.html"
 ```
+
+
+
+
+
+### 6. ¿Cuál es la diferencia entre una declaración de función y una expresión de función?
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+### 7. ¿Qué es la palabra clave "this" en JS?
+
