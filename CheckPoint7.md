@@ -510,17 +510,113 @@ La salida (output) de este ejemplo:
 
 
 
+**Valores `truthy` y `falsy`:**&#x20;
+
+En JS, las condiciones no solo reciben `true`/`false`. Valores como `0`, `""` (cadena vacía), `null`, `undefined` o `NaN` se consideran `false` (falsy), mientras que el resto son `true` (truthy).&#x20;
 
 
 
 
 
+### 5. ¿Qué es un operador ternario?
 
 
 
+El **operador condicional** (**ternario**) es el único operador en JavaScript que tiene tres operandos. Este operador se usa con frecuencia como atajo para la instrucción `if`.
+
+#### Sintaxis <a href="#sintaxis" id="sintaxis"></a>
+
+```
+condición ? expr1 : expr2
+```
+
+#### Parámetros <a href="#parametros" id="parametros"></a>
+
+`condición`
+
+Una expresión que se evalúa como true o false.
+
+`expr1`, `expr2`
+
+Expresión con valores de algún tipo.
 
 
 
+#### Descripción <a href="#descripcion" id="descripcion"></a>
 
-* **Valores `truthy` y `falsy`:** En JS, las condiciones no solo reciben `true`/`false`. Valores como `0`, `""` (cadena vacía), `null`, `undefined` o `NaN` se consideran `false` (falsy), mientras que el resto son `true` (truthy).&#x20;
+Si la `condición` es `true`, el operador retorna el valor de la `expr1`; de lo contrario, devuelve el valor de `expr2`. Por ejemplo, para mostrar un mensaje diferente en función del valor de la variable _`isMember,`_ se puede usar esta declaración:
 
+```javascript
+"La Cuota es de:  " + (isMember ? "$2.00" : "$10.00");
+```
+
+
+
+También puedes asignar variables dependiendo del resultado de la condición ternaria:
+
+```javascript
+var elvisLives = Math.PI > 4 ? "Sip" : "Nop";
+```
+
+
+
+También es posible realizar evaluaciones ternarias múltiples (Nota: El operador condicional es asociativo):
+
+```javascript
+var firstCheck = false,
+  secondCheck = false,
+  access = firstCheck
+    ? "Acceso Denegado"
+    : secondCheck
+      ? "Acceso Denegado"
+      : "Acceso Permitido";
+
+console.log(access); // muestra "Acceso Permitido"
+```
+
+
+
+También puede usar operaciones ternarias en espacio vacío con el propósito de realizar diferentes operaciones:
+
+
+
+```javascript
+var stop = false,
+  age = 16;
+
+age > 18 ? location.assign("continue.html") : (stop = true);
+```
+
+
+
+También puede realizar más de una operación por caso, separándolas con una coma:
+
+```javascript
+var stop = false,
+  age = 23;
+
+age > 18
+  ? (alert("OK, puedes continuar."), location.assign("continue.html"))
+  : ((stop = true), alert("Disculpa, eres menor de edad!"));
+```
+
+
+
+También puede realizar más de una operación durante la asignación de un valor. En este caso, _**el último valor separado por una coma del paréntesis**_**&#x20;será el valor asignado**.
+
+```javascript
+var age = 16;
+
+var url =
+  age > 18
+    ? (alert("OK, puedes continuar."),
+      // alert devuelve "undefined", pero será ignorado porque
+      // no es el último valor separado por comas del paréntesis
+      "continue.html") // el valor a ser asignado si age > 18
+    : (alert("Eres menor de edad!"),
+      alert("Disculpa :-("),
+      // etc. etc.
+      "stop.html"); // el valor a ser asignado si !(age > 18)
+
+location.assign(url); // "stop.html"
+```
