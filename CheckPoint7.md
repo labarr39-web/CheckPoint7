@@ -212,6 +212,56 @@ Esta inmutabilidad de los tipos primitivos es fundamental para entender cómo fu
 
 <br>
 
+El objeto String proporciona una variedad de métodos para trabajar con textos. Vamos a ver algunos de los más útiles
+
+### Métodos de transformación <a href="#metodos-de-transformacion" id="metodos-de-transformacion"></a>
+
+| Método          | Descripción                                      |
+| --------------- | ------------------------------------------------ |
+| `toUpperCase()` | Convierte todos los caracteres a mayúsculas      |
+| `toLowerCase()` | Convierte todos los caracteres a minúsculas      |
+| `trim()`        | Elimina los espacios en blanco de ambos extremos |
+
+Convierte todos los caracteres de la cadena a mayúsculas.
+
+
+
+{% tabs %}
+{% tab title="toUpperCase()" %}
+```javascript
+const str = "Hello World";
+const result = str.toUpperCase();
+
+console.log(result); // "HELLO WORLD"
+```
+{% endtab %}
+
+{% tab title="toLowerCase()" %}
+
+
+Convierte todos los caracteres de la cadena a minúsculas.
+
+```javascript
+const str = "Hello World";
+const result = str.toLowerCase();
+
+console.log(result); // "hello world"
+```
+{% endtab %}
+{% endtabs %}
+
+
+
+
+
+
+
+
+
+
+
+
+
 \
 <br>
 
