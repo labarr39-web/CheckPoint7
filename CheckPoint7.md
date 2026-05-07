@@ -265,11 +265,11 @@ if (parece === 'pato') {
 
 
 
-Desgraciadamente si la condición no se cumple, el código entra en la parte `else` , que se convierte en una especie de cajón desastre ya que se puede entender como "si no cumple lo anterior haz esto", y en caso de necesitar hacer otro crivado no lo lograremos con esta estructura... Para ello usaremos `else if`  para anidar otra condición si no se cumple la anterior.
+Desgraciadamente si la condición no se cumple, el código entra en la parte `else` , que se convierte en una especie de cajón desastre ya que se puede entender como "si no cumple lo anterior haz esto", y en caso de necesitar otro cribado no lo lograremos con esta estructura... Para ello usaremos `else if`  para anidar otra condición si no se cumple la anterior.
 
 ```javascript
 let parece = 'perro';
-let habla = 'cuack';
+let habla = 'guau';
 let andaComo = 'perro';
 
 if (parece === 'pato') { 
