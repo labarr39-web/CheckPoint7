@@ -358,6 +358,164 @@ La declaración `break` es opcional y está asociada con cada etiqueta de `case`
 
 
 
+#### **Ejemplos**
+
+En el siguiente ejemplo, si `expresión` se resuelve a "Platanos", el algoritmo compara el valor con el `case` "Platanos" y ejecuta la declaración asociada. Cuando se encuentra un `break`, el programa sale del condicional `switch` y ejecuta la declaración que lo procede. Si se omite el `break`, el `case` "Cerezas" también es ejecutado.
+
+```javascript
+switch (expr) {
+  case "Naranjas":
+    console.log("El kilogramo de naranjas cuesta $0.59.");
+    break;
+  case "Manzanas":
+    console.log("El kilogramo de manzanas cuesta $0.32.");
+    break;
+  case "Platanos":
+    console.log("El kilogramo de platanos cuesta $0.48.");
+    break;
+  case "Cerezas":
+    console.log("El kilogramo de cerezas cuesta $3.00.");
+    break;
+  case "Mangos":
+  case "Papayas":
+    console.log("El kilogramo de mangos y papayas cuesta $2.79.");
+    break;
+  default:
+    console.log("Lo lamentamos, por el momento no disponemos de " + expr + ".");
+}
+
+console.log("¿Hay algo más que te quisiera consultar?");
+```
+
+
+
+#### ¿Y si me olvido de poner un break?
+
+Si no se pone un  `break`, el script se ejecutará desde donde se cumple la condición y ejecutará el siguiente  `case`  independientemente si esta condición se cumple o no. Veámoslo con un ejemplo:
+
+```javascript
+var foo = 0;
+switch (foo) {
+  case -1:
+    console.log("1 negativo");
+    break;
+  case 0: // foo es 0, por lo tanto se cumple la condición y se ejecutara el siguiente bloque
+    console.log(0);
+  // NOTA: el "break" olvidado debería estar aquí
+  case 1: // No hay sentencia "break" en el 'case 0:', por lo tanto este caso también será ejecutado
+    console.log(1);
+    break; // Al encontrar un "break", no será ejecutado el 'case 2:'
+  case 2:
+    console.log(2);
+    break;
+  default:
+    console.log("default");
+}
+```
+
+
+
+#### ¿`Default` debe ir al final?
+
+No, no es necesario.&#x20;
+
+JavaScript retornará a la instancia `default` en caso de no encontrar una coincidencia:
+
+```javascript
+var foo = 5;
+switch (foo) {
+  case 2:
+    console.log(2);
+    break; // al encontrar este 'break' no se continuará con el siguiente 'default:'
+  default:
+    console.log("default");
+  // fall-through
+  case 1:
+    console.log("1");
+}
+```
+
+
+
+Al estar el `case 1:` a continuación de `default`, y al no haber un `break` de por medio, veremos que la declaración del `case 1:` será ejecutada, apareciendo el resultado `1` en el _log de consola._
+
+
+
+#### **Operación única con múltiples casos**
+
+Este método toma ventaja del hecho de que, si no hay un `break` debajo de una declaración `case`, continuará la ejecución hasta el siguiente `case`, ignorando si en dicho caso se cumple o no el criterio indicado. Comprobar en la sección _¿Qué pasa si olvido un `break`?_
+
+Este es un ejemplo de operación única con sentencia `switch` secuencial, donde cuatro valores diferentes se comportan exactamente de la misma manera:
+
+```javascript
+var Animal = "Jirafa";
+switch (Animal) {
+  case "Vaca":
+  case "Jirafa":
+  case "Perro":
+  case "Cerdo":
+    console.log("Este animal subirá al Arca de Noé.");
+    break;
+  case "Dinosaurio":
+  default:
+    console.log("Este animal no lo hará.");
+}
+```
+
+
+
+#### **Operaciones encadenadas con múltiples casos**
+
+Este es un ejemplo de una sentencia `switch` secuencial con múltiples operaciones, donde, dependiendo del valor entero dado, se pueden recibir diferentes resultados. Esto demuestra que el algoritmo correrá en el orden en que se coloquen las declaraciones `case`, y que no tiene que ser numéricamente secuencial. En JavaScript, también es posible combinar definiciones con valores `"string"` dentro de estas declaraciones `case`.
+
+```javascript
+var foo = 1;
+var output = "Salida: ";
+switch (foo) {
+  case 10:
+    output += "¿Y ";
+  case 1:
+    output += "Cuál ";
+    output += "Es ";
+  case 2:
+    output += "Tu ";
+  case 3:
+    output += "Nombre";
+  case 4:
+    output += "?";
+    console.log(output);
+    break;
+  case 5:
+    output += "!";
+    console.log(output);
+    break;
+  default:
+    console.log("Por favor, selecciona un valor del 1 al 6.");
+}
+```
+
+
+
+La salida (output) de este ejemplo:
+
+| Value                                  | Log text                                   |
+| -------------------------------------- | ------------------------------------------ |
+| foo es NaN o no es 1, 2, 3, 4, 5 ni 10 | Por favor, selecciona un valor del 1 al 6. |
+| 10                                     | Salida: ¿Y Cuál Es Tu Nombre?              |
+| 1                                      | Salida: Cuál Es Tu Nombre?                 |
+| 2                                      | Salida: Tu Nombre?                         |
+| 3                                      | Salida: Nombre?                            |
+| 4                                      | Salida: ?                                  |
+| 5                                      | Salida: !                                  |
+
+
+
+
+
+
+
+
+
 
 
 
