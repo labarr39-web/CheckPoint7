@@ -477,7 +477,8 @@ switch (expresión) {
     //Declaraciones ejecutadas cuando el resultado de expresión coincide con valorN
     [break;]
   default:
-    //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
+    //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de 
+    //la expresión
     [break;]
 }
 ```
@@ -558,7 +559,8 @@ switch (foo) {
   case 0: // foo es 0, por lo tanto se cumple la condición y se ejecutara el siguiente bloque
     console.log(0);
   // NOTA: el "break" olvidado debería estar aquí
-  case 1: // No hay sentencia "break" en el 'case 0:', por lo tanto este caso también será ejecutado
+  case 1: // No hay sentencia "break" en el 'case 0:', por lo tanto este caso también
+          // será ejecutado
     console.log(1);
     break; // Al encontrar un "break", no será ejecutado el 'case 2:'
   case 2:
