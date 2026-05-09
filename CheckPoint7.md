@@ -214,9 +214,9 @@ Esta inmutabilidad de los tipos primitivos es fundamental para entender cómo fu
 
 El objeto String proporciona una variedad de métodos para trabajar con textos. Vamos a ver algunos de los más útiles
 
-### Métodos de transformación <a href="#metodos-de-transformacion" id="metodos-de-transformacion"></a>
+#### Métodos de transformación <a href="#metodos-de-transformacion" id="metodos-de-transformacion"></a>
 
-<table><thead><tr><th width="174">Método</th><th width="214">Descripción</th><th>Ejemplo</th></tr></thead><tbody><tr><td><code>toUpperCase()</code></td><td>Convierte todos los caracteres a mayúsculas</td><td><p></p><pre class="language-javascript"><code class="lang-javascript">const str = "Hello World";
+<table><thead><tr><th width="170">Método</th><th width="200">Descripción</th><th>Ejemplo</th></tr></thead><tbody><tr><td><code>toUpperCase()</code></td><td>Convierte todos los caracteres a mayúsculas</td><td><p></p><pre class="language-javascript"><code class="lang-javascript">const str = "Hello World";
 const result = str.toUpperCase();
 
 console.log(result); // "HELLO WORLD"
@@ -229,7 +229,34 @@ const result = str.trim();
 console.log(result); // "Hello World"
 </code></pre></td></tr></tbody></table>
 
+#### Métodos de manipulación <a href="#metodos-de-manipulacion" id="metodos-de-manipulacion"></a>
 
+<table><thead><tr><th width="170">Método</th><th width="200">Descripción</th><th></th></tr></thead><tbody><tr><td><code>concat()</code></td><td>Combina dos o más cadenas de texto</td><td><pre class="language-javascript"><code class="lang-javascript">const str1 = "Hello";
+const str2 = "World";
+const result = str1.concat(" ", str2);
+
+console.log(result); // "Hello World"
+</code></pre></td></tr><tr><td><code>slice()</code></td><td>Extrae una sección de una cadena</td><td><p></p><pre class="language-javascript"><code class="lang-javascript">const str = "JavaScript";
+const result = str.slice(0, 4);
+
+console.log(result); // "Java"
+</code></pre></td></tr><tr><td><code>substring()</code></td><td>Devuelve una parte de la cadena entre los índices</td><td><pre class="language-javascript"><code class="lang-javascript">const str = "JavaScript";
+const result = str.substring(4, 10);
+
+console.log(result); // "Script"
+</code></pre></td></tr><tr><td><code>substr()</code></td><td>Devuelve una parte de la cadena con una longitud</td><td><pre class="language-javascript"><code class="lang-javascript">const str = "JavaScript";
+const result = str.substr(4, 6);
+
+console.log(result); // "Script"
+</code></pre></td></tr><tr><td><code>split()</code></td><td>Divide la cadena en un array usando un delimitador</td><td><pre class="language-javascript"><code class="lang-javascript">const str = "Hello World";
+const result = str.split(" ");
+
+console.log(result);//["Hello", "World"]
+</code></pre></td></tr><tr><td><code>replace()</code></td><td>Reemplaza una parte de la cadena</td><td><pre class="language-javascript"><code class="lang-javascript">const str = "Hello World";
+const result = str.replace("World", "JavaScript");
+
+console.log(result); // "Hello JavaScript"
+</code></pre></td></tr></tbody></table>
 
 
 
