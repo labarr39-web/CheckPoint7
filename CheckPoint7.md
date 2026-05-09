@@ -216,7 +216,7 @@ El objeto String proporciona una variedad de métodos para trabajar con textos. 
 
 #### Métodos de transformación <a href="#metodos-de-transformacion" id="metodos-de-transformacion"></a>
 
-<table><thead><tr><th width="170">Método</th><th width="200">Descripción</th><th>Ejemplo</th></tr></thead><tbody><tr><td><code>toUpperCase()</code></td><td>Convierte todos los caracteres a mayúsculas</td><td><p></p><pre class="language-javascript"><code class="lang-javascript">const str = "Hello World";
+<table><thead><tr><th width="155">Método</th><th width="200">Descripción</th><th>Ejemplo</th></tr></thead><tbody><tr><td><code>toUpperCase()</code></td><td>Convierte todos los caracteres a mayúsculas</td><td><p></p><pre class="language-javascript"><code class="lang-javascript">const str = "Hello World";
 const result = str.toUpperCase();
 
 console.log(result); // "HELLO WORLD"
@@ -231,7 +231,7 @@ console.log(result); // "Hello World"
 
 #### Métodos de manipulación <a href="#metodos-de-manipulacion" id="metodos-de-manipulacion"></a>
 
-<table><thead><tr><th width="170">Método</th><th width="200">Descripción</th><th></th></tr></thead><tbody><tr><td><code>concat()</code></td><td>Combina dos o más cadenas de texto</td><td><pre class="language-javascript"><code class="lang-javascript">const str1 = "Hello";
+<table><thead><tr><th width="155">Método</th><th width="200">Descripción</th><th width="395">Ejemplo</th></tr></thead><tbody><tr><td><code>concat()</code></td><td>Combina dos o más cadenas de texto</td><td><pre class="language-javascript"><code class="lang-javascript">const str1 = "Hello";
 const str2 = "World";
 const result = str1.concat(" ", str2);
 
@@ -253,9 +253,114 @@ const result = str.split(" ");
 
 console.log(result);//["Hello", "World"]
 </code></pre></td></tr><tr><td><code>replace()</code></td><td>Reemplaza una parte de la cadena</td><td><pre class="language-javascript"><code class="lang-javascript">const str = "Hello World";
-const result = str.replace("World", "JavaScript");
+const result = str.replace("Hello", "Hi");
 
-console.log(result); // "Hello JavaScript"
+console.log(result); 
+// "Hi World"
+</code></pre></td></tr></tbody></table>
+
+
+
+#### Métodos de búsqueda <a href="#metodos-de-busqueda" id="metodos-de-busqueda"></a>
+
+<table><thead><tr><th width="155">Método</th><th width="200">Descripción</th><th width="390">Ejemplo</th></tr></thead><tbody><tr><td><code>indexOf()</code></td><td>Devuelve el índice de la primera aparición</td><td><pre class="language-javascript"><code class="lang-javascript">const str = "Hello World";
+const index = str.indexOf("World");
+
+console.log(index); // 6
+</code></pre></td></tr><tr><td><code>lastIndexOf()</code></td><td>Devuelve el índice de la última aparición</td><td><pre class="language-javascript"><code class="lang-javascript">const str = "Hello World World";
+const index = str.lastIndexOf("World");
+
+console.log(index); // 12
+</code></pre></td></tr><tr><td><code>includes()</code></td><td>Determina si una subcadena está presente</td><td><pre class="language-javascript"><code class="lang-javascript">const str = "Hello World";
+const result = str.includes("World");
+
+console.log(result); // true
+</code></pre></td></tr><tr><td><code>startsWith()</code></td><td>Determina comienza con una cadena</td><td><pre class="language-javascript"><code class="lang-javascript">const str = "Hello World";
+const result = str.startsWith("Hello");
+
+console.log(result); // true
+</code></pre></td></tr><tr><td><code>endsWith()</code></td><td>Determina termina con una cadena</td><td><pre class="language-javascript"><code class="lang-javascript">const str = "Hello World";
+const result = str.endsWith("World");
+
+console.log(result); // true
+</code></pre></td></tr></tbody></table>
+
+
+
+#### Métodos de comparación <a href="#metodos-de-comparacion" id="metodos-de-comparacion"></a>
+
+<table><thead><tr><th width="155">Método</th><th width="200">Descripción</th><th width="390">Ejemplo</th></tr></thead><tbody><tr><td><code>localeCompare()</code></td><td>Compara dos cadenas en una localización específica</td><td><pre class="language-javascript"><code class="lang-javascript">const str1 = "a";
+const str2 = "b";
+const result = str1.localeCompare(str2);
+console.log(result); 
+/* -1 (porque "a" es menor que "b" en el 
+orden lexicográfico) */
+</code></pre></td></tr><tr><td><code>normalize()</code></td><td>Devuelve la forma Unicode normalizada de la cadena</td><td><pre class="language-javascript"><code class="lang-javascript">const str = "\u00F1";
+const normalizedStr=str.normalize("NFD");
+console.log(normalizedStr); // "ñ"
+</code></pre></td></tr></tbody></table>
+
+
+
+#### Métodos de conversión
+
+<table><thead><tr><th width="155">Método</th><th width="200">Descripción</th><th width="390">Ejemplo</th></tr></thead><tbody><tr><td><code>toString()</code></td><td>Convierte y devuelve la cadena como una representación de texto.</td><td><pre class="language-javascript"><code class="lang-javascript">const num = 123;
+const str = num.toString();
+console.log(str); // "123"
+</code></pre></td></tr><tr><td><code>valueOf()</code></td><td>Devuelve el valor primitivo de un objeto <code>String</code>.</td><td><pre class="language-javascript"><code class="lang-javascript">const str = new String("Hello World");
+const primitiveValue = str.valueOf();
+console.log(primitiveValue); 
+// "Hello World"
+</code></pre></td></tr></tbody></table>
+
+
+
+#### Métodos de acceso <a href="#metodos-de-acceso" id="metodos-de-acceso"></a>
+
+<table><thead><tr><th width="155">Método</th><th width="200">Descripción</th><th width="390">Ejemplo</th></tr></thead><tbody><tr><td><code>charAt()</code></td><td>Devuelve el carácter en el índice especificado</td><td><pre class="language-javascript"><code class="lang-javascript">const str = "Hello World";
+const char = str.charAt(6);
+
+console.log(char); // "W"
+</code></pre></td></tr><tr><td><code>charCodeAt()</code></td><td>Devuelve el valor Unicode de un carácter</td><td><pre class="language-javascript"><code class="lang-javascript">const str = "Hello World";
+const code = str.charCodeAt(6);
+
+console.log(code); 
+// 87 (código Unicode de "W")
+</code></pre></td></tr><tr><td><code>codePointAt()</code></td><td>Devuelve el valor Unicode de un carácter (16 bits)</td><td><pre class="language-javascript"><code class="lang-javascript">const str = "😊";
+const codePoint = str.codePointAt(0);
+
+console.log(codePoint); // 128522
+</code></pre></td></tr></tbody></table>
+
+
+
+#### Métodos de plantillas <a href="#metodos-de-plantillas" id="metodos-de-plantillas"></a>
+
+<table><thead><tr><th width="155">Método</th><th width="200">Descripción</th><th width="395">Ejemplo</th></tr></thead><tbody><tr><td><code>padStart()</code></td><td>Rellena el principio hasta alcanzar una longitud determinada</td><td><pre class="language-javascript"><code class="lang-javascript">const str = "5";
+const paddedStr = str.padStart(3, "0");
+
+console.log(paddedStr); // "005"
+</code></pre></td></tr><tr><td><code>padEnd()</code></td><td>Rellena el final hasta alcanzar una longitud determinada</td><td><pre class="language-javascript"><code class="lang-javascript">const str = "5";
+const paddedStr = str.padEnd(3, "0");
+
+console.log(paddedStr); // "500"
+</code></pre></td></tr><tr><td><code>repeat()</code></td><td>Repite una cadena un número de veces</td><td><pre class="language-javascript"><code class="lang-javascript">const str = "abc";
+const repeatedStr = str.repeat(3);
+
+console.log(repeatedStr); // "abcabcabc"
+</code></pre></td></tr></tbody></table>
+
+
+
+#### Métodos de Regex <a href="#metodos-de-regex" id="metodos-de-regex"></a>
+
+<table><thead><tr><th width="155">Método</th><th width="200">Descripción</th><th width="395">Ejemplo</th></tr></thead><tbody><tr><td><code>match()</code></td><td>Busca coincidencias entre una cadena y una expresión regular</td><td><pre class="language-javascript"><code class="lang-javascript">const str = "Hello World";
+const result = str.match(/World/);
+console.log(result); // ["World"]
+</code></pre></td></tr><tr><td><code>matchAll()</code></td><td>Devuelve un iterador con todas las coincidencias de una expresión</td><td><pre class="language-javascript"><code class="lang-javascript">const str = "Hello World World";
+const iterator = str.matchAll(/World/g);
+console.log([...iterator]); 
+// [["World"], ["World"]]
 </code></pre></td></tr></tbody></table>
 
 
@@ -265,11 +370,6 @@ console.log(result); // "Hello JavaScript"
 
 
 
-
-
-
-\
-<br>
 
 ### 4. ¿Qué es un condicional?
 
