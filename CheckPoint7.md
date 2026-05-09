@@ -216,39 +216,18 @@ El objeto String proporciona una variedad de métodos para trabajar con textos. 
 
 ### Métodos de transformación <a href="#metodos-de-transformacion" id="metodos-de-transformacion"></a>
 
-| Método          | Descripción                                      |
-| --------------- | ------------------------------------------------ |
-| `toUpperCase()` | Convierte todos los caracteres a mayúsculas      |
-| `toLowerCase()` | Convierte todos los caracteres a minúsculas      |
-| `trim()`        | Elimina los espacios en blanco de ambos extremos |
-
-Convierte todos los caracteres de la cadena a mayúsculas.
-
-
-
-{% tabs %}
-{% tab title="toUpperCase()" %}
-```javascript
-const str = "Hello World";
+<table><thead><tr><th width="174">Método</th><th width="214">Descripción</th><th>Ejemplo</th></tr></thead><tbody><tr><td><code>toUpperCase()</code></td><td>Convierte todos los caracteres a mayúsculas</td><td><p></p><pre class="language-javascript"><code class="lang-javascript">const str = "Hello World";
 const result = str.toUpperCase();
 
 console.log(result); // "HELLO WORLD"
-```
-{% endtab %}
-
-{% tab title="toLowerCase()" %}
-
-
-Convierte todos los caracteres de la cadena a minúsculas.
-
-```javascript
-const str = "Hello World";
+</code></pre></td></tr><tr><td><code>toLowerCase()</code></td><td>Convierte todos los caracteres a minúsculas</td><td><p></p><pre class="language-javascript"><code class="lang-javascript">const str = "Hello World";
 const result = str.toLowerCase();
-
 console.log(result); // "hello world"
-```
-{% endtab %}
-{% endtabs %}
+</code></pre></td></tr><tr><td><code>trim()</code></td><td>Elimina los espacios en blanco de ambos extremos</td><td><pre class="language-javascript"><code class="lang-javascript">const str = "   Hello World   ";
+const result = str.trim();
+
+console.log(result); // "Hello World"
+</code></pre></td></tr></tbody></table>
 
 
 
