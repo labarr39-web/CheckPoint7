@@ -1003,11 +1003,33 @@ testScope();
 
 
 
+***
 
 
 
+Resumiendo...
+
+* **¿Qué son y cuándo usar las funciones declarativas?**
+
+Son las funciones que se declaran, a las cuales se les asigna un nombre (lo más descriptivo posible), y pueden ser llamadas antes de ser definidas dentro del código.
 
 
+
+* &#x20;**¿Qué son y cuándo debo usar las funciones anónimas en JavaScript?**
+
+Las funciones anónimas son aquellas que no se les asigna un nombre y se utilizan generalmente como argumentos en otras funciones, especialmente en programación funcional y manejo de eventos.
+
+
+
+* &#x20;**¿Por qué debería considerar usar funciones de flecha (arrow functions) en mi código JavaScript?**
+
+\
+Las funciones de flecha ofrecen una sintaxis más corta y mantendrán el valor del `this` de contextos externos, lo que simplifica la escritura de código en muchos casos.
+
+
+
+**1. ¿Cuál es la diferencia entre parámetros y argumentos en funciones de JavaScript?**\
+Los **parámetros** son las variables que se definen al declarar una función, mientras que los **argumentos** son los valores que se pasan a esa función al momento de su invocación.
 
 
 
