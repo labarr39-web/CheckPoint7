@@ -1095,9 +1095,11 @@ Puede haber muchos entornos léxicos disponibles, pero el contexto de ejecución
 
 
 
+<br>
 
+<img src="https://www.freecodecamp.org/news/content/images/2020/10/lexical.gif" alt="" height="400" width="600">
 
-
+<br>
 
 
 
