@@ -928,4 +928,262 @@ Puede haber muchos entornos léxicos disponibles, pero el contexto de ejecución
 
 ![Lexical Environment](<.gitbook/assets/lexical (1).webp>)
 
-<br>
+
+
+Cada uno de los contextos de ejecución contiene un `Registro de Entorno` (Environment Record). A medida que el motor JavaScript ejecuta el código, las variables y los nombres de las funciones se agregan al registro de entorno.
+
+Este fenómeno se conoce como vinculación en JavaScript.  La vinculación ayuda a asociar los identificadores (variables, nombres de funciones) con la palabra clave `this` para un contexto de ejecución.
+
+
+
+Dicho así resulta bastante difícil de entender, por ello vamos a intentar aclararlo...
+
+
+
+#### Regla #1: Cómo funciona la vinculación implícita de JavaScript <a href="#regla-1-c-mo-funciona-la-vinculaci-n-impl-cita-de-javascript" id="regla-1-c-mo-funciona-la-vinculaci-n-impl-cita-de-javascript"></a>
+
+
+
+La vinculación implícita cubre la mayoría de los casos de uso para tratar con la palabra clave `this`.
+
+Con este método se debe verificar lo que está a la _izquierda del operador de punto (.) adyacente a una función_ en el momento de la invocación.&#x20;
+
+Esto determina a saber donde la palabra clave `this` está vinculada.
+
+
+
+Veamos un ejemplo para entenderlo mejor.
+
+```js
+let usuario = {
+    nombre: 'Tapas',
+    direccion: 'Mi compañía',
+    getName: function() {
+        console.log(this.nombre);
+    }
+};
+
+usuario.getName();
+```
+
+
+
+Aquí, `this` está vinculado al objeto usuario.&#x20;
+
+Lo sabemos porque a la izquierda del operador punto(.) adyacente a la función `getName()`, vemos el objeto `usuario` .&#x20;
+
+Por lo tanto, `this.name` va a registrar _Tapas_ en la consola.
+
+
+
+Veamos otro ejemplo para comprender mejor este concepto:
+
+```js
+function decorateLogName(obj) {
+      obj.logName = function() {
+          console.log(this.nombre);
+      }
+  };
+
+  let tom = {
+      nombre: 'Tom',
+      edad: 7
+  };
+
+  let jerry = {
+      nombre: 'jerry',
+      edad: 3
+  };
+
+  decorateLogName(tom);
+  decorateLogName(jerry);
+
+  tom.logName();
+  jerry.logName();
+```
+
+
+
+En este ejemplo, hay dos objetos, `tom` y `jerry` .&#x20;
+
+Hemos decorado (mejorado) estos objetos adjuntando un método llamado `logName()`.
+
+
+
+Observa que cuando invocamos `tom.logName()`, el objeto `tom` esta a la izquierda del operador punto(.) adyacente a la función `logName()`.&#x20;
+
+Entonces, `this` está vinculado al objeto `tom` y registra el valor de _Tom_ ( aquí, `this.nombre` es igual a _Tom_).&#x20;
+
+Lo mismo se aplica cuando se invoca `jerry.logName()`.<br>
+
+
+
+#### Regla #2: Cómo funciona la vinculación explícita de JavaScript (explicit binding) <a href="#regla-2-c-mo-funciona-la-vinculaci-n-expl-cita-de-javascript-explicit-binding" id="regla-2-c-mo-funciona-la-vinculaci-n-expl-cita-de-javascript-explicit-binding"></a>
+
+
+
+Hemos visto que JavaScript crea un entorno para ejecutar el código que escribimos.&#x20;
+
+Se encarga de la creación de memoria para variables, funciones, objetos, etc. _en la fase de creación_.
+
+&#x20;Finalmente ejecuta el código en la _fase de ejecución_. Este entorno especial se denomina `Contexto de ejecución` (execution context).
+
+
+
+Puede haber muchos entornos de este tipo (contextos de ejecución) en una aplicación JavaScript. Cada contexto de ejecución opera independientemente de los demás.
+
+Pero a veces, es posible que deseemos usar cosas de un contexto de ejecución en otro. Ahí es donde entra en juego la **vinculación explícita**.
+
+En la vinculación explícita, podemos llamar a una función con un objeto cuando la función está fuera del contexto de ejecución del objeto.
+
+Hay tres métodos muy especiales, `call()`, `apply()` y `bind()` que nos ayudan a lograr una vinculación explícita.
+
+
+
+#### Como funciona el método `call()` de JavaScript <a href="#como-funciona-el-m-todo-call-de-javascript" id="como-funciona-el-m-todo-call-de-javascript"></a>
+
+
+
+Con el método `call()` , el contexto con el que se debe llamar a la función se pasará como parámetro `call()`.&#x20;
+
+
+
+Veamos cómo funciona con un ejemplo:
+
+```js
+let getName = function() {
+     console.log(this.nombre);
+ }
+ 
+let usuario = {
+   nombre: 'Tapas',
+   direccion: 'Mi compañía'  
+ };
+
+getName.call(usuario);
+```
+
+
+
+Aquí, el método `call()` se invoca en una función llamada `getName()`.&#x20;
+
+La función `getName()` simplemente registra `this.nombre`. ¿Pero qué es `this` aquí?. Eso se determina por lo que se ha pasado al método `call()`.
+
+
+
+Aquí, `this` se vinculará al objeto de usuario porque hemos pasado el usuario como parámetro al método `call()`.&#x20;
+
+Entonces `this.nombre` debe registrar el valor de la propiedad de nombre del objeto de usuario, es decir, _Tapas_.
+
+
+
+En el ejemplo anterior, hemos pasado solo un argumento para `call()`. Pero también podemos pasar múltiples argumentos a `call()`, así:
+
+```js
+let getName = function(pasatiempo1, pasatiempo2) {
+     console.log(this.nombre + ' le gusta ' + pasatiempo1 + ' , ' + pasatiempo2);
+ }
+
+let usuario = {
+   nombre: 'Tapas',
+   direccion: 'Bangalore'  
+ };
+
+let pasatiempos = ['Nadar', 'Escribir'];
+ 
+getName.call(usuario, pasatiempos[0], pasatiempos[1]);
+```
+
+
+
+Aquí hemos pasado varios argumentos al método `call()`.&#x20;
+
+El primer argumento debe ser el contexto del objeto con el que se debe invocar la función.&#x20;
+
+Los otros parámetros podrían ser simplemente valores para usar.
+
+
+
+Aquí estoy pasando _Nadar_ y _Escribir_ como dos parámetros para la función `getName()`.
+
+¿Notaste un punto crítico aquí? En el caso de una `call()`, los argumentos deben pasarse uno por uno, lo cual no es una forma inteligente de hacer las cosas. Ahí es donde nuestro método siguiente, `apply()`, entra en escena.
+
+
+
+#### Cómo funciona el método `apply()` de JavaScript <a href="#c-mo-funciona-el-m-todo-apply-de-javascript" id="c-mo-funciona-el-m-todo-apply-de-javascript"></a>
+
+
+
+Esta forma frenética de pasar argumentos al método `call()` puede resolverse con otro método alternativo llamado `apply()`.&#x20;
+
+Es exactamente lo mismo que  `call()` pero le permite pasar los argumentos de manera más conveniente.&#x20;
+
+
+
+Vamos a echar un vistazo:
+
+```js
+let getName = function(pasatiempo1, pasatiempo2) {
+     console.log(this.name + ' le gusta ' + pasatiempo1 + ' , ' + pasatiempo2);
+ }
+ 
+let usuario = {
+   nombre: 'Tapas',
+   direccion: 'Bangalore'  
+ };
+
+let pasatiempos = ['Nadar', 'Escribir'];
+ 
+getName.apply(usuario, pasatiempos);
+```
+
+
+
+Aquí podemos pasar una serie de argumentos, lo que es mucho más conveniente que pasarlos uno por uno.
+
+Consejo: cuando solo tenga un argumento de valor o ningún argumento de valor para pasar, use `call()`. Cuando tenga varios argumentos de valor para pasar, use `apply()`.
+
+
+
+#### Cómo funciona el método `bind()` de JavaScript <a href="#c-mo-funciona-el-m-todo-bind-de-javascript" id="c-mo-funciona-el-m-todo-bind-de-javascript"></a>
+
+
+
+El método `bind()` es similar al método `call()` pero con una diferencia.&#x20;
+
+A diferencia del método `call()` de llamar a la función directamente, `bind()` devuelve una función nueva y podemos invocarla en su lugar.
+
+```js
+let getName = function(pasatiempo1, pasatiempo2) {
+     console.log(this.name + ' le gusta ' + pasatiempo1 + ' , ' + pasatiempo2);
+ }
+
+let usuario = {
+   nombre: 'Tapas',
+   direccion: 'Bangalore'  
+ };
+
+let pasatiempos = ['Nadar', 'Escribir'];
+let nuevaFn = getName.bind(usuario, pasatiempos[0], pasatiempos[1]); 
+
+nuevaFn();
+```
+
+
+
+Aquí, `getName.bind()` no invoca la función `getName()` directamente. Devuelve una nueva función, `newFn` y podemos invocarla como `newFn()`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
