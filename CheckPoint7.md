@@ -933,10 +933,8 @@ Las funciones de flecha son ideales para usar en programación moderna. Sin emba
 
 Los parámetros son variables que se definen al declarar una función, mientras que los argumentos son los valores que se pasan a esta.
 
-
-
-```scss
-Copiarfunction multiplicar(x, y) {
+```javascript
+function multiplicar(x, y) {
     return x * y;
 }
 
@@ -945,7 +943,63 @@ console.log(multiplicar(5, 3)); // Salida: 15
 
 
 
+#### Parámetros opcionales <a href="#parmetrosopcionales" id="parmetrosopcionales"></a>
 
+También puedes definir funciones con parámetros opcionales utilizando valores por defecto.
+
+```javascript
+function saludar(nombre = "Invitado") {
+    return `Hola, ${nombre}!`;
+}
+
+console.log(saludar()); // Salida: Hola, Invitado!
+```
+
+
+
+#### Ejemplo práctico: calculadora simple usando funciones <a href="#ejemploprcticocalculadorasimpleusandofunciones" id="ejemploprcticocalculadorasimpleusandofunciones"></a>
+
+Vamos a crear una calculadora simple que suma, resta, multiplica y divide.
+
+```javascript
+function calculadora(num1, num2, operacion) {
+    switch (operacion) {
+        case 'sumar':
+            return num1 + num2;
+        case 'restar':
+            return num1 - num2;
+        case 'multiplicar':
+            return num1 * num2;
+        case 'dividir':
+            return num1 / num2;
+        default:
+            return "Operación no válida";
+    }
+}
+
+console.log(calculadora(10, 5, 'sumar')); // Salida: 15
+```
+
+### Alcance de las funciones: variables locales vs. globales <a href="#alcancedelasfuncionesvariableslocalesvsglobales" id="alcancedelasfuncionesvariableslocalesvsglobales"></a>
+
+El **alcance** de variables determina dónde se pueden usar.&#x20;
+
+Las variables **globales** se pueden acceder desde cualquier parte del código, mientras que las **locales** solo se pueden usar dentro de la función donde fueron definidas.
+
+#### Ejemplo  <a href="#ejemploilustrativo" id="ejemploilustrativo"></a>
+
+```javascript
+let globalVar = "Soy global";
+
+function testScope() {
+    let localVar = "Soy local";
+    console.log(globalVar); // Acceso a variable global
+    console.log(localVar); // Acceso a variable local
+}
+
+testScope();
+// console.log(localVar); // Error: localVar no está definida
+```
 
 
 
