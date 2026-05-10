@@ -817,7 +817,7 @@ function saludo(nombre) {
 
 Son fáciles de entender y, por lo general, se utilizan para la mayoría de las aplicaciones.
 
-
+Una peculiaridad que tienen es que pueden ser llamadas antes de ser definidas dentro del código, todo gracias al llamado 'hoisting' o alzamiento; y es que antes de ejecutarse, todas las funciones declarativas son elevadas al principio del ámbito.
 
 #### Funciones expresivas <a href="#funcionesexpresivas" id="funcionesexpresivas"></a>
 
@@ -1023,12 +1023,19 @@ Las funciones anónimas son aquellas que no se les asigna un nombre y se utiliza
 
 * &#x20;**¿Por qué debería considerar usar funciones de flecha (arrow functions) en mi código JavaScript?**
 
-\
 Las funciones de flecha ofrecen una sintaxis más corta y mantendrán el valor del `this` de contextos externos, lo que simplifica la escritura de código en muchos casos.
 
+***
 
 
-**1. ¿Cuál es la diferencia entre parámetros y argumentos en funciones de JavaScript?**\
+
+Y a modo de apunte...
+
+
+
+* &#x20;**¿Cuál es la diferencia entre parámetros y argumentos en funciones de JavaScript?**
+
+\
 Los **parámetros** son las variables que se definen al declarar una función, mientras que los **argumentos** son los valores que se pasan a esa función al momento de su invocación.
 
 
