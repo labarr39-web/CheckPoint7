@@ -1042,7 +1042,70 @@ Los **parámetros** son las variables que se definen al declarar una función, m
 
 
 
-
-
 ### 7. ¿Qué es la palabra clave "this" en JS?
+
+
+
+La palabra clave `this` de JavaScript es uno de los aspectos más difíciles de comprender del lenguaje. Pero es de vital importancia para escribir código JavaScript más avanzado.
+
+
+
+En JavaScript, la palabra clave `this` nos permite:
+
+
+
+* Reutilizar funciones en diferentes contextos de ejecución. Es decir, una función una vez definida se puede invocar para diferentes objetos usando la palabra clave `this`.
+
+
+
+* Identificar el objeto en el contexto de ejecución actual cuando invocamos un método.
+
+
+
+La palabra clave `this` estrechamente asociada con las funciones de JavaScript.&#x20;
+
+Cuando se trata de `this`, **lo fundamental es entender dónde se invoca una función**. Porque no sabemos qué hay en la palabra clave `this` hasta que se invoca la función.
+
+El uso de `this` se puede clasificar en cinco aspectos vinculantes (`binding` ) diferentes.&#x20;
+
+Vamos a aprender sobre los cinco aspectos con ejemplos.
+
+
+
+#### **Primero, ¿Qué es la vinculación (binding)?** <a href="#primero-qu-es-la-vinculaci-n-binding" id="primero-qu-es-la-vinculaci-n-binding"></a>
+
+En JavaScript, un `Entorno Léxico`  (Lexical Environment) es donde se escribe físicamente tu código.&#x20;
+
+En el siguiente ejemplo, el nombre de la variable está `léxicamente` dentro de la función `decirNombre()`.
+
+
+
+```js
+function decirNombre() {
+  let nombre = 'algunNombre';
+  console.log('El nombre es, ', nombre);
+ }
+```
+
+
+
+Un `Contexto de Ejecución` (Execution Context) se refiere al código que se está ejecutando actualmente y todo lo demás que ayuda a ejecutarlo.&#x20;
+
+Puede haber muchos entornos léxicos disponibles, pero el contexto de ejecución que se está ejecutando _actualmente_ es manejado por el Contexto de Ejecución.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
