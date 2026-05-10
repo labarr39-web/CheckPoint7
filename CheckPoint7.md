@@ -926,6 +926,6 @@ Puede haber muchos entornos léxicos disponibles, pero el contexto de ejecución
 
 <br>
 
-![](.gitbook/assets/lexical.webp)
+![Lexical Environment](images/lexical.webp)
 
 <br>
