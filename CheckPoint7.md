@@ -785,7 +785,169 @@ location.assign(url); // "stop.html"
 
 ### 6. ¿Cuál es la diferencia entre una declaración de función y una expresión de función?
 
-<br>
+
+
+Empecemos recordando que las funciones en JavaScript son bloques de código reutilizables que permiten llevar a cabo tareas específicas de manera eficiente.&#x20;
+
+En esencia, una función puede aceptar uno o varios parámetros y devolver un resultado, lo que la convierte en una herramienta poderosa para estructurar y organizar nuestro código.&#x20;
+
+Desde funciones declaradas hasta funciones expresadas y funciones de flecha, cada una ofrece diferentes sintaxis y comportamientos que se adaptan a diversas necesidades de programación.
+
+Vamos a ver varios ejemplos prácticos que ilustran cómo utilizar funciones en JavaScript, facilitando así la comprensión de este lenguaje de programación fundamental.
+
+
+
+#### Tipos de funciones en JavaScript <a href="#tiposdefuncionesenjavascript" id="tiposdefuncionesenjavascript"></a>
+
+JavaScript ofrece varios estilos de funciones. Las más comunes son las funciones declarativas, expresivas y las funciones de flecha.
+
+
+
+#### Funciones declarativas <a href="#funcionesdeclarativas" id="funcionesdeclarativas"></a>
+
+Las **funciones declarativas** son el método más convencional de crear funciones en JavaScript. Se definen con la palabra clave `function` y, a regularmente, se utilizan para definir funciones que se invocan múltiples veces a lo largo de un programa.&#x20;
+
+Por ejemplo, una función declarativa simple que devuelve un mensaje puede definirse así:
+
+```javascript
+function saludo(nombre) {
+    return `Hola, ${nombre}!`;
+}
+```
+
+Son fáciles de entender y, por lo general, se utilizan para la mayoría de las aplicaciones.
+
+
+
+#### Funciones expresivas <a href="#funcionesexpresivas" id="funcionesexpresivas"></a>
+
+Por otro lado, están las funciones expresivas, que son aquellas que se asignan a una variable.&#x20;
+
+Son funciones anónimas, ya que no poseen un nombre.
+
+El uso de funciones expresivas permite una mayor flexibilidad.
+
+```javascript
+const saludo = function(nombre) {
+    return `Hola, ${nombre}!`;
+};
+```
+
+
+
+#### Funciones de flecha <a href="#funcionesdeflecha" id="funcionesdeflecha"></a>
+
+Introducidas en ES6, las funciones de flecha son una forma más concisa de escribir funciones anónimas.
+
+```javascript
+const saludo = (nombre) => `Hola, ${nombre}!`;
+```
+
+
+
+#### Sintaxis básica de una función en JavaScript <a href="#sintaxisbsicadeunafuncinenjavascript" id="sintaxisbsicadeunafuncinenjavascript"></a>
+
+Entender la sintaxis básica es crucial para cualquier desarrollo que involucre funciones.&#x20;
+
+La estructura fundamental es la siguiente:
+
+
+
+1. **Palabra clave**: `function` (en funciones declarativas).
+2. **Nombre de la función**: El nombre que le das a la función.
+3. **Paréntesis**: Donde defines los parámetros.
+4. **Cuerpo de la función**: Contiene el código que se ejecutará.
+
+Un ejemplo de una función sencilla podría ser:
+
+```javascript
+function sum(a, b) {
+    return a + b;
+}
+```
+
+
+
+¡Veamos cómo funciona una función simple en acción!
+
+Supongamos que deseas sumar dos números:
+
+```javascript
+function sumarNumeros(num1, num2) {
+    return num1 + num2;
+}
+
+console.log(sumarNumeros(5, 10)); // Salida: 15
+```
+
+Este ejemplo no solo ilustra la sintaxis, sino también cómo invocar (llamar) la función.
+
+
+
+#### Funciones anónimas en JavaScript: definición y ejemplos <a href="#funcionesannimasenjavascriptdefinicinyejemplos" id="funcionesannimasenjavascriptdefinicinyejemplos"></a>
+
+
+
+Las funciones anónimas son funciones que no tienen un nombre específico.&#x20;
+
+Se utilizan comúnmente cuando deseas pasar una función como argumento a otra función, por ejemplo, en operaciones de matriz.
+
+```javascript
+const numeros = [1, 2, 3, 4];
+const dobles = numeros.map(function(num) {
+    return num * 2;
+});
+console.log(dobles); // Salida: [2, 4, 6, 8]
+```
+
+#### Uso de funciones anónimas en eventos <a href="#usodefuncionesannimaseneventos" id="usodefuncionesannimaseneventos"></a>
+
+Puedes usar funciones anónimas para manejar eventos, lo que es especialmente útil en el desarrollo web.
+
+```javascript
+document.getElementById("miBoton").addEventListener("click", function() {
+    alert("¡Botón clickeado!");
+});
+```
+
+
+
+#### La importancia de las funciones de flecha (Arrow Functions) <a href="#laimportanciadelasfuncionesdeflechaarrowfunctions" id="laimportanciadelasfuncionesdeflechaarrowfunctions"></a>
+
+Las funciones de flecha, que son una forma compacta de escribir funciones, no solo hacen que tu código sea más legible, sino que también mantienen el contexto del `this`.
+
+```javascript
+const sumar = (a, b) => a + b;
+console.log(sumar(5, 10)); // Salida: 15
+```
+
+
+
+#### Comparación con funciones tradicionales <a href="#comparacinconfuncionestradicionales" id="comparacinconfuncionestradicionales"></a>
+
+Las funciones de flecha son ideales para usar en programación moderna. Sin embargo, deben ser utilizadas con precaución, especialmente al depender de `this`.
+
+
+
+#### Parámetros y argumentos en funciones de JavaScript <a href="#parmetrosyargumentosenfuncionesdejavascript" id="parmetrosyargumentosenfuncionesdejavascript"></a>
+
+Los parámetros son variables que se definen al declarar una función, mientras que los argumentos son los valores que se pasan a esta.
+
+
+
+```scss
+Copiarfunction multiplicar(x, y) {
+    return x * y;
+}
+
+console.log(multiplicar(5, 3)); // Salida: 15
+```
+
+
+
+
+
+
 
 
 
