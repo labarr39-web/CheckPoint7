@@ -1177,13 +1177,141 @@ Aquí, `getName.bind()` no invoca la función `getName()` directamente. Devuelve
 
 
 
+#### Regla #3: La vinculación `new` de JavaScript <a href="#regla-3-la-vinculaci-n-new-de-javascript" id="regla-3-la-vinculaci-n-new-de-javascript"></a>
 
 
 
+La palabra clave `new` se utiliza para crear un objeto a partir de la función constructora.
+
+```js
+let Caricatura = function(nombre, personaje) {
+     this.nombre = nombre;
+     this.personaje = personaje;
+     this.log = function() {
+         console.log(this.nombre +  ' is a ' + this.personaje);
+     }
+ };
+```
 
 
 
+Puede crear objetos usando la palabra clave `new` como esta:
+
+```js
+ let tom = new Caricatura('Tom', 'Gato');
+ let jerry = new Caricatura('Jerry', 'Raton');
+```
 
 
 
+Cuando se invoca una función con la palabra clave `new` , JavaScript crea un objeto interno `this` (como, this = {}) dentro de la función. El recién creado  `this` se une al objeto que se está creando utilizando la palabra clave `new` .
 
+¿Suena complejo? Ok, analicémoslo.
+
+```js
+let tom = new Caricatura('Tom', 'Gato');
+```
+
+Aquí se invoca la función Caricatura con la palabra clave `new` . Entonces, el `this` creado internamente estará vinculado al nuevo objeto que se está creando aquí, el cual es _tom._
+
+
+
+#### Regla #4: Vinculación de Objetos Globales de JavaScript <a href="#regla-4-vinculaci-n-de-objetos-globales-de-javascript" id="regla-4-vinculaci-n-de-objetos-globales-de-javascript"></a>
+
+
+
+¿Cuál crees que será el resultado del siguiente código? ¿A qué se vincula `this` aquí?
+
+```js
+let sayName = function(nombre) {
+    console.log(this.nombre);
+};
+
+window.nombre = 'Tapas';
+sayName();
+```
+
+Si la palabra clave `this` no se resuelve con ninguno de las vinculaciones, `implicit` (implícito), `explicit` (explícito) o `new`, la palabra clave `this` se enlaza con el objeto `window(global)` .
+
+Sin embargo, hay une excepción. El _modo estricto_ (**strict mode**) de JavaScript no permite esta vinculación predeterminada.
+
+```js
+"use strict";
+function myFunction() {
+  return this;
+}
+```
+
+En el caso anterior, la palabra clave `this` no está definida (`undefined.`)
+
+
+
+#### Regla #5: Vinculación de elemento de evento HTML en JavaScript (event element) <a href="#regla-5-vinculaci-n-de-elemento-de-evento-html-en-javascript-event-element" id="regla-5-vinculaci-n-de-elemento-de-evento-html-en-javascript-event-element"></a>
+
+
+
+En los controladores de eventos de HTML, la palabra clave `this` se vincula a los elementos HTML que reciben el evento.
+
+```html
+<button onclick="console.log(this)">¡Haz clic aquí!</button>
+```
+
+
+
+Es el registro de salida (output log) en la consola cuando hace clic en el botón:
+
+```html
+"<button onclick='console.log(this)'>¡Haz clic aquí!</button>"
+```
+
+
+
+Puedes cambiar el estilo del botón usando la palabra clave `this` , así:
+
+```html
+<button onclick="this.style.color='teal'">¡Haz clic aquí!</button>
+```
+
+
+
+Pero tenga cuidado cuando llame a una función en el botón clic y use la palabra clave `this` dentro de esa función.
+
+```html
+<button onclick="cambiarColor()">¡Haz clic aquí!</button>
+```
+
+
+
+y en JavaScript:
+
+```js
+function cambiarColor() {
+  this.style.color='teal';
+}
+```
+
+El código anterior no funcionará como se esperaba. Como hemos visto en la Regla 4, aquí esto estará ligado al objeto global (en el modo 'no estricto') donde no hay un objeto de estilo para establecer el color.
+
+
+
+#### En Resumen <a href="#en-resumen" id="en-resumen"></a>
+
+
+
+* En el caso de la vinculación implícita, la palabra clave `this` se vincula a la izquierda del operador punto (.).
+
+
+
+* En el caso de una vinculación explícita, podemos llamar a una función con un objeto cuando la función está fuera del contexto de ejecución del objeto. Los métodos `call()`, `apply()`, and `bind()` juegan un papel importante aquí.
+
+
+
+* Cuando se invoca una función con la palabra clave `new`, la palabra clave `this` dentro de la función se une al nuevo objeto que se está construyendo.
+
+
+
+* Cuando la palabra clave `this` no se resuelve con ninguno de las vinculaciones, `implicit`(implícito), `explicit`(explícito) o `new`, se enlaza con el objeto `window(global)`. En el modo estricto (strict mode) de JavaScript, la palabra clave `this` no estará definida (undefined).
+
+
+
+* En los controladores de eventos HTML, la palabra clave `this` se vincula a los elementos HTML que reciben el evento.
