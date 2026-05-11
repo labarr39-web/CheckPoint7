@@ -8,29 +8,27 @@
 
 ### 1. ¿Qué diferencia a Javascript de cualquier otro lenguaje de programación?
 
+
+
 JavaScript es especial por varias razones que lo han convertido en uno de los lenguajes de programación más importantes y populares en el desarrollo web y más allá. A continuación, te explico en detalle por qué JavaScript es especial:
 
 ​
 
 * **Lenguaje de programación del navegador**
 
-​
-
-JavaScript es el único lenguaje de programación que se ejecuta de forma nativa en todos los navegadores web modernos sin necesidad de plugins adicionales. Esto significa que cualquier página web puede incluir código JavaScript para hacerla interactiva, dinámica y más atractiva para el usuario.
+​JavaScript es el único lenguaje de programación que se ejecuta de forma nativa en todos los navegadores web modernos sin necesidad de plugins adicionales. Esto significa que cualquier página web puede incluir código JavaScript para hacerla interactiva, dinámica y más atractiva para el usuario.
 
 ​
 
 * **Versatilidad y omnipresencia**
 
-<br>
-
 **Frontend:** JavaScript es el lenguaje principal para el desarrollo del lado del cliente (frontend). Permite manipular el DOM (Document Object Model), gestionar eventos, validar formularios, crear animaciones, y mucho más.
 
-<br>
+
 
 **Backend:** Con la llegada de Node.js, JavaScript también se usa en el servidor, lo que permite a los desarrolladores usar un solo lenguaje para todo el stack de desarrollo (full stack).
 
-<br>
+
 
 **Aplicaciones móviles y de escritorio:** Frameworks como React Native, Electron y otros permiten crear aplicaciones móviles y de escritorio usando JavaScript.
 
@@ -38,41 +36,31 @@ JavaScript es el único lenguaje de programación que se ejecuta de forma nativa
 
 * **Ecosistema y comunidad**
 
-​
-
-JavaScript tiene un ecosistema enorme con miles de librerías y frameworks (React, Angular, Vue, etc.) que facilitan el desarrollo rápido y eficiente. Además, cuenta con una comunidad global muy activa que contribuye constantemente con herramientas, tutoriales y soporte.
+​JavaScript tiene un ecosistema enorme con miles de librerías y frameworks (React, Angular, Vue, etc.) que facilitan el desarrollo rápido y eficiente. Además, cuenta con una comunidad global muy activa que contribuye constantemente con herramientas, tutoriales y soporte.
 
 ​
 
 * **Evolución constante**
 
-​
-
-JavaScript no es un lenguaje estático; evoluciona continuamente a través del estándar ECMAScript, que introduce nuevas características y mejoras regularmente, manteniéndolo moderno y relevante.
+​JavaScript no es un lenguaje estático; evoluciona continuamente a través del estándar ECMAScript, que introduce nuevas características y mejoras regularmente, manteniéndolo moderno y relevante.
 
 ​
 
 * **Facilidad de aprendizaje y uso**
 
-​
-
-JavaScript es relativamente fácil de aprender para principiantes debido a su sintaxis flexible y su naturaleza interpretada, lo que permite probar código rápidamente en cualquier navegador sin necesidad de configuraciones complejas.
+​JavaScript es relativamente fácil de aprender para principiantes debido a su sintaxis flexible y su naturaleza interpretada, lo que permite probar código rápidamente en cualquier navegador sin necesidad de configuraciones complejas.
 
 ​
 
 * **Interactividad y experiencia de usuario**
 
-​
-
-JavaScript permite crear experiencias de usuario ricas e interactivas, desde menús desplegables hasta juegos en línea, pasando por aplicaciones web complejas que funcionan casi como aplicaciones nativas.
+​JavaScript permite crear experiencias de usuario ricas e interactivas, desde menús desplegables hasta juegos en línea, pasando por aplicaciones web complejas que funcionan casi como aplicaciones nativas.
 
 ​
 
 * **Integración con otras tecnologías web**
 
-​
-
-JavaScript se integra perfectamente con HTML y CSS, los otros pilares del desarrollo web, permitiendo manipular y modificar la estructura y el estilo de las páginas web en tiempo real.
+​JavaScript se integra perfectamente con HTML y CSS, los otros pilares del desarrollo web, permitiendo manipular y modificar la estructura y el estilo de las páginas web en tiempo real.
 
 ​
 
@@ -82,7 +70,6 @@ JavaScript se integra perfectamente con HTML y CSS, los otros pilares del desarr
 
 Resumiendo, JavaScript es especial porque es el lenguaje universal del navegador, extremadamente versátil, con un ecosistema robusto y en constante evolución, que permite crear desde simples interacciones hasta aplicaciones web completas y complejas. Esta combinación única lo hace indispensable en el mundo del desarrollo web y tecnológico actual.
 
-\
 <br>
 
 ### 2. ¿Cuáles son algunos tipos de datos JS?
@@ -142,12 +129,9 @@ Representa un identificador único e inmutable, usado principalmente para propie
 
 Ejemplo: Symbol('id').
 
-\
-<br>
+
 
 #### **2. Tipos de Objetos**
-
-<br>
 
 Los objetos son colecciones de propiedades y pueden contener métodos.\
 <br>
@@ -175,8 +159,6 @@ Ejemplo: function() { return "Hola"; }.
 Date, RegExp, Map, Set, entre otros, son tipos de objetos incorporados que tienen funcionalidades específicas.\
 <br>
 
-<br>
-
 | Tipo de dato | Descripción                 | Ejemplo           |
 | ------------ | --------------------------- | ----------------- |
 | Number       | Números enteros y decimales | 123, 3.14         |
@@ -191,8 +173,6 @@ Date, RegExp, Map, Set, entre otros, son tipos de objetos incorporados que tiene
 | Function     | Funciones como objetos      | function() {}     |
 
 \
-<br>
-
 **Los tipos primitivos en JavaScript son inmutables**. Esto significa que una vez que se crea un valor primitivo, no puede ser cambiado o modificado. Por ejemplo, si tienes una cadena de texto (string) o un número (number), no puedes alterar ese valor directamente; cualquier operación que parezca modificarlo en realidad crea un nuevo valor.
 
 Para ilustrar:
@@ -201,7 +181,6 @@ Las cadenas de texto son inmutables: si haces una operación como concatenar o c
 
 Esta inmutabilidad de los tipos primitivos es fundamental para entender cómo funcionan las asignaciones y comparaciones en JavaScript.
 
-\
 <br>
 
 ### 3. ¿Cuáles son las tres funciones de String en JS?
@@ -328,17 +307,25 @@ console.log([...iterator]);
 // [["World"], ["World"]]
 </code></pre></td></tr></tbody></table>
 
+
+
 ### 4. ¿Qué es un condicional?
 
-<br>
+
 
 Un condicional en JavaScript es una estructura de control que permite al programa tomar decisiones y ejecutar diferentes bloques de código dependiendo de si una condición lógica es verdadera (`true`) o falsa (`false`).
 
 Es fundamental para crear comportamiento dinámico, evaluando condiciones (`if`, `else`, `switch`) para dirigir el flujo.
 
+
+
 **Tipos y Características Principales:**
 
+
+
 * **`if` / `else if` / `else`:** La estructura básica. Evalúa una condición; si es verdadera, ejecuta el bloque `if`, de lo contrario, puede ejecutar un `else`.
+
+
 
 **Ejemplo Básico `if/else`:**
 
@@ -350,6 +337,8 @@ if (edad >= 18) {
     console.log("Eres menor de edad."); // Se ejecuta si es false
 }
 ```
+
+
 
 Puede darse el caso en el que haya que ir seleccionando opciones dependiendo de las anteriores, es decir, condicionales anidadas.
 
@@ -367,6 +356,8 @@ if (parece === 'pato') {
     }
 } 
 ```
+
+
 
 Desgraciadamente si la condición no se cumple, el código entra en la parte `else` , que se convierte en una especie de cajón desastre ya que se puede entender como "si no cumple lo anterior haz esto", y en caso de necesitar otro cribado no lo lograremos con esta estructura... Para ello usaremos `else if` para anidar otra condición si no se cumple la anterior.
 
@@ -395,12 +386,21 @@ if (parece === 'pato') {
 
 ```
 
+
+
 * **Operador Ternario (`? :`):** Un atajo compacto para `if...else` de una sola línea y su sintaxis es: `condición ? expresión1 : expresión2` . Pero de este operador hablaremos un poco más adelante.
+
+
+
 * **`switch`:** Ideal para evaluar una variable contra múltiples casos (`case`) posibles.
+
+
 
 Supongamos que estamos en una tienda virtual y queremos comprar por ejemplo una prenda de vestir, pero dependiendo de la talla el precio varía; así pues, podríamos anidar estructures `else if` , una por cada talla, lo cual haría un código más complicado de leer (y más fácil de cometer un error al escribirlo), imagina cómo puede quedar el código teniendo que anidar las opciones desde la talla XXS hasta la XXXL...
 
-En lugar de ello podríamos usar `switch...case` , cuya sintáxis básica es:
+
+
+En lugar de ello podríamos usar `switch...case` , cuya sintaxis básica es:
 
 ```
 switch (expresión) {
@@ -421,15 +421,21 @@ switch (expresión) {
 }
 ```
 
+
+
 **expresión:**
 
 Es una expresión que es comparada con el valor de cada instancia `case`.
+
+
 
 **case valorN:**
 
 Una instancia `case valorN` se usa para compararla con `expresión`.
 
 Si `expresión` coincide con `valorN`, las declaraciones dentro de la instancia `case` se ejecutan hasta que se encuentre el final de la declaración `switch` o hasta encontrar una interrupción `break`.
+
+
 
 **default:**
 
@@ -474,6 +480,8 @@ switch (expr) {
 console.log("¿Hay algo más que te quisiera consultar?");
 ```
 
+
+
 #### ¿Y si me olvido de poner un break?
 
 Si no se pone un `break`, el script se ejecutará desde donde se cumple la condición y ejecutará el siguiente `case` independientemente si esta condición se cumple o no. Veámoslo con un ejemplo:
@@ -499,6 +507,8 @@ switch (foo) {
 }
 ```
 
+
+
 #### ¿`Default` debe ir al final?
 
 No, no es necesario.
@@ -519,7 +529,11 @@ switch (foo) {
 }
 ```
 
+
+
 Al estar el `case 1:` a continuación de `default`, y al no haber un `break` de por medio, veremos que la declaración del `case 1:` será ejecutada, apareciendo el resultado `1` en el _log de consola._
+
+
 
 #### **Operación única con múltiples casos**
 
@@ -541,6 +555,8 @@ switch (Animal) {
     console.log("Este animal no lo hará.");
 }
 ```
+
+
 
 #### **Operaciones encadenadas con múltiples casos**
 
@@ -572,7 +588,9 @@ switch (foo) {
 }
 ```
 
-La salida (output) de este ejemplo:
+
+
+La salida (output) de este ejemplo será:
 
 | Value                                  | Log text                                   |
 | -------------------------------------- | ------------------------------------------ |
@@ -584,9 +602,13 @@ La salida (output) de este ejemplo:
 | 4                                      | Salida: ?                                  |
 | 5                                      | Salida: !                                  |
 
+
+
 **Valores `truthy` y `falsy`:**
 
 En JS, las condiciones no solo reciben `true`/`false`. Valores como `0`, `""` (cadena vacía), `null`, `undefined` o `NaN` se consideran `false` (falsy), mientras que el resto son `true` (truthy).
+
+
 
 ### 5. ¿Qué es un operador ternario?
 
@@ -608,6 +630,8 @@ Una expresión que se evalúa como true o false.
 
 Expresión con valores de algún tipo.
 
+
+
 #### Descripción <a href="#descripcion" id="descripcion"></a>
 
 Si la `condición` es `true`, el operador retorna el valor de la `expr1`; de lo contrario, devuelve el valor de `expr2`. Por ejemplo, para mostrar un mensaje diferente en función del valor de la variable _`isMember,`_ se puede usar esta declaración:
@@ -616,11 +640,15 @@ Si la `condición` es `true`, el operador retorna el valor de la `expr1`; de lo 
 "La Cuota es de:  " + (isMember ? "$2.00" : "$10.00");
 ```
 
+
+
 También puedes asignar variables dependiendo del resultado de la condición ternaria:
 
 ```javascript
 var elvisLives = Math.PI > 4 ? "Sip" : "Nop";
 ```
+
+
 
 También es posible realizar evaluaciones ternarias múltiples (Nota: El operador condicional es asociativo):
 
@@ -636,6 +664,8 @@ var firstCheck = false,
 console.log(access); // muestra "Acceso Permitido"
 ```
 
+
+
 También puede usar operaciones ternarias en espacio vacío con el propósito de realizar diferentes operaciones:
 
 ```javascript
@@ -644,6 +674,8 @@ var stop = false,
 
 age > 18 ? location.assign("continue.html") : (stop = true);
 ```
+
+
 
 También puede realizar más de una operación por caso, separándolas con una coma:
 
@@ -655,6 +687,8 @@ age > 18
   ? (alert("OK, puedes continuar."), location.assign("continue.html"))
   : ((stop = true), alert("Disculpa, eres menor de edad!"));
 ```
+
+
 
 También puede realizar más de una operación durante la asignación de un valor. En este caso, _**el último valor separado por una coma del paréntesis**_**&#x20;será el valor asignado**.
 
@@ -675,6 +709,10 @@ var url =
 location.assign(url); // "stop.html"
 ```
 
+
+
+
+
 ### 6. ¿Cuál es la diferencia entre una declaración de función y una expresión de función?
 
 Empecemos recordando que las funciones en JavaScript son bloques de código reutilizables que permiten llevar a cabo tareas específicas de manera eficiente.
@@ -685,11 +723,15 @@ Desde funciones declaradas hasta funciones expresadas y funciones de flecha, cad
 
 Vamos a ver varios ejemplos prácticos que ilustran cómo utilizar funciones en JavaScript, facilitando así la comprensión de este lenguaje de programación fundamental.
 
+
+
 #### Tipos de funciones en JavaScript <a href="#tiposdefuncionesenjavascript" id="tiposdefuncionesenjavascript"></a>
 
 JavaScript ofrece varios estilos de funciones. Las más comunes son las funciones declarativas, expresivas y las funciones de flecha.
 
-#### Funciones declarativas <a href="#funcionesdeclarativas" id="funcionesdeclarativas"></a>
+
+
+* **Funciones declarativas**
 
 Las **funciones declarativas** son el método más convencional de crear funciones en JavaScript. Se definen con la palabra clave `function` y, a regularmente, se utilizan para definir funciones que se invocan múltiples veces a lo largo de un programa.
 
@@ -701,11 +743,15 @@ function saludo(nombre) {
 }
 ```
 
+
+
 Son fáciles de entender y, por lo general, se utilizan para la mayoría de las aplicaciones.
 
 Una peculiaridad que tienen es que pueden ser llamadas antes de ser definidas dentro del código, todo gracias al llamado 'hoisting' o alzamiento; y es que antes de ejecutarse, todas las funciones declarativas son elevadas al principio del ámbito.
 
-#### Funciones expresivas <a href="#funcionesexpresivas" id="funcionesexpresivas"></a>
+
+
+* **Funciones expresivas**
 
 Por otro lado, están las funciones expresivas, que son aquellas que se asignan a una variable.
 
@@ -719,7 +765,9 @@ const saludo = function(nombre) {
 };
 ```
 
-#### Funciones de flecha <a href="#funcionesdeflecha" id="funcionesdeflecha"></a>
+
+
+* Funciones de flecha
 
 Introducidas en ES6, las funciones de flecha son una forma más concisa de escribir funciones anónimas.
 
@@ -727,9 +775,13 @@ Introducidas en ES6, las funciones de flecha son una forma más concisa de escri
 const saludo = (nombre) => `Hola, ${nombre}!`;
 ```
 
+
+
 #### Sintaxis básica de una función en JavaScript <a href="#sintaxisbsicadeunafuncinenjavascript" id="sintaxisbsicadeunafuncinenjavascript"></a>
 
 Entender la sintaxis básica es crucial para cualquier desarrollo que involucre funciones.
+
+
 
 La estructura fundamental es la siguiente:
 
@@ -737,6 +789,8 @@ La estructura fundamental es la siguiente:
 2. **Nombre de la función**: El nombre que le das a la función.
 3. **Paréntesis**: Donde defines los parámetros.
 4. **Cuerpo de la función**: Contiene el código que se ejecutará.
+
+
 
 Un ejemplo de una función sencilla podría ser:
 
@@ -746,7 +800,9 @@ function sum(a, b) {
 }
 ```
 
-¡Veamos cómo funciona una función simple en acción!
+
+
+Veamos cómo funciona una función simple en acción.
 
 Supongamos que deseas sumar dos números:
 
@@ -758,7 +814,11 @@ function sumarNumeros(num1, num2) {
 console.log(sumarNumeros(5, 10)); // Salida: 15
 ```
 
+
+
 Este ejemplo no solo ilustra la sintaxis, sino también cómo invocar (llamar) la función.
+
+
 
 #### Funciones anónimas en JavaScript: definición y ejemplos <a href="#funcionesannimasenjavascriptdefinicinyejemplos" id="funcionesannimasenjavascriptdefinicinyejemplos"></a>
 
@@ -774,6 +834,8 @@ const dobles = numeros.map(function(num) {
 console.log(dobles); // Salida: [2, 4, 6, 8]
 ```
 
+
+
 #### Uso de funciones anónimas en eventos <a href="#usodefuncionesannimaseneventos" id="usodefuncionesannimaseneventos"></a>
 
 Puedes usar funciones anónimas para manejar eventos, lo que es especialmente útil en el desarrollo web.
@@ -784,6 +846,8 @@ document.getElementById("miBoton").addEventListener("click", function() {
 });
 ```
 
+
+
 #### La importancia de las funciones de flecha (Arrow Functions) <a href="#laimportanciadelasfuncionesdeflechaarrowfunctions" id="laimportanciadelasfuncionesdeflechaarrowfunctions"></a>
 
 Las funciones de flecha, que son una forma compacta de escribir funciones, no solo hacen que tu código sea más legible, sino que también mantienen el contexto del `this`.
@@ -793,9 +857,13 @@ const sumar = (a, b) => a + b;
 console.log(sumar(5, 10)); // Salida: 15
 ```
 
+
+
 #### Comparación con funciones tradicionales <a href="#comparacinconfuncionestradicionales" id="comparacinconfuncionestradicionales"></a>
 
 Las funciones de flecha son ideales para usar en programación moderna. Sin embargo, deben ser utilizadas con precaución, especialmente al depender de `this`.
+
+
 
 #### Parámetros y argumentos en funciones de JavaScript <a href="#parmetrosyargumentosenfuncionesdejavascript" id="parmetrosyargumentosenfuncionesdejavascript"></a>
 
@@ -809,6 +877,8 @@ function multiplicar(x, y) {
 console.log(multiplicar(5, 3)); // Salida: 15
 ```
 
+
+
 #### Parámetros opcionales <a href="#parmetrosopcionales" id="parmetrosopcionales"></a>
 
 También puedes definir funciones con parámetros opcionales utilizando valores por defecto.
@@ -820,6 +890,8 @@ function saludar(nombre = "Invitado") {
 
 console.log(saludar()); // Salida: Hola, Invitado!
 ```
+
+
 
 #### Ejemplo práctico: calculadora simple usando funciones <a href="#ejemploprcticocalculadorasimpleusandofunciones" id="ejemploprcticocalculadorasimpleusandofunciones"></a>
 
@@ -844,7 +916,9 @@ function calculadora(num1, num2, operacion) {
 console.log(calculadora(10, 5, 'sumar')); // Salida: 15
 ```
 
-### Alcance de las funciones: variables locales vs. globales <a href="#alcancedelasfuncionesvariableslocalesvsglobales" id="alcancedelasfuncionesvariableslocalesvsglobales"></a>
+
+
+#### Alcance de las funciones: variables locales vs. globales <a href="#alcancedelasfuncionesvariableslocalesvsglobales" id="alcancedelasfuncionesvariableslocalesvsglobales"></a>
 
 El **alcance** de variables determina dónde se pueden usar.
 
@@ -865,23 +939,37 @@ testScope();
 // console.log(localVar); // Error: localVar no está definida
 ```
 
+
+
 ***
 
+
+
 Resumiendo...
+
+
 
 * **¿Qué son y cuándo usar las funciones declarativas?**
 
 Son las funciones que se declaran, a las cuales se les asigna un nombre (lo más descriptivo posible), y pueden ser llamadas antes de ser definidas dentro del código.
 
+
+
 * **¿Qué son y cuándo debo usar las funciones anónimas en JavaScript?**
 
 Las funciones anónimas son aquellas que no se les asigna un nombre y se utilizan generalmente como argumentos en otras funciones, especialmente en programación funcional y manejo de eventos.
+
+
 
 * **¿Por qué debería considerar usar funciones de flecha (arrow functions) en mi código JavaScript?**
 
 Las funciones de flecha ofrecen una sintaxis más corta y mantendrán el valor del `this` de contextos externos, lo que simplifica la escritura de código en muchos casos.
 
+
+
 ***
+
+
 
 Y a modo de apunte...
 
@@ -890,14 +978,25 @@ Y a modo de apunte...
 \
 Los **parámetros** son las variables que se definen al declarar una función, mientras que los **argumentos** son los valores que se pasan a esa función al momento de su invocación.
 
+
+
 ### 7. ¿Qué es la palabra clave "this" en JS?
 
+
+
 La palabra clave `this` de JavaScript es uno de los aspectos más difíciles de comprender del lenguaje. Pero es de vital importancia para escribir código JavaScript más avanzado.
+
+
 
 En JavaScript, la palabra clave `this` nos permite:
 
 * Reutilizar funciones en diferentes contextos de ejecución. Es decir, una función una vez definida se puede invocar para diferentes objetos usando la palabra clave `this`.
+
+
+
 * Identificar el objeto en el contexto de ejecución actual cuando invocamos un método.
+
+
 
 La palabra clave `this` estrechamente asociada con las funciones de JavaScript.
 
@@ -906,6 +1005,8 @@ Cuando se trata de `this`, **lo fundamental es entender dónde se invoca una fun
 El uso de `this` se puede clasificar en cinco aspectos vinculantes (`binding` ) diferentes.
 
 Vamos a aprender sobre los cinco aspectos con ejemplos.
+
+
 
 #### **Primero, ¿Qué es la vinculación (binding)?** <a href="#primero-qu-es-la-vinculaci-n-binding" id="primero-qu-es-la-vinculaci-n-binding"></a>
 
@@ -919,6 +1020,8 @@ function decirNombre() {
   console.log('El nombre es, ', nombre);
  }
 ```
+
+
 
 Un `Contexto de Ejecución` (Execution Context) se refiere al código que se está ejecutando actualmente y todo lo demás que ayuda a ejecutarlo.
 
